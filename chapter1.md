@@ -120,6 +120,7 @@ lst = s.slice("r")
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 success_msg("Great work!")
+
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:3319f86744
