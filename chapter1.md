@@ -271,9 +271,7 @@ You received a string that contains a text message you want to collect, but it a
 - `text_clean = text.split(">>>START_HERE<<<")[2]`
 
 *** =hint
-- The syntax for `split` is `s.split(string)`, where `s` is the string you want to split and `string` is the delimiter string.
-- Use its index to iterate over each element in `lst`, and assign the capitalized string to the element.
-- The syntax for `join` is `s.join(lst)`, where `s` is the string to put at the end of each string in `lst`.
+- Recall what kind of object `split` outputs.
 
 *** =pre_exercise_code
 ```{python}
@@ -281,57 +279,13 @@ text="Time:17:06Jul07 Location:Cambridge,MA >>START_HERE<< Do you want to grab d
 
 ```
 
-*** =sample_code
-```{python}
-# Assign the definition of "Ruckkehrunruhe" to the object par
-par = "ruckkehrunruhe is the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness. you have to keep reminding yourself that it happened at all. however it felt so vivid just days ago."
-
-# Slice the word at every occurence of ". ": lst
-
-
-# Create an empty list to store the sentences with capitalized first letter: lst_cap
-lst_cap = []
-
-# Capitalize the first letter of each sentence and append it to lst_cap
-
-
-
-
-# Joining all the sentences back together: par_cap
-
-
-# Print the result
-print(par_cap)
-
-```
-
-*** =solution
-```{python}
-# Assign the definition of "Ruckkehrunruhe" to the object par
-par = "ruckkehrunruhe is the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness. you have to keep reminding yourself that it happened at all. however it felt so vivid just days ago."
-
-# Slice the word at every occurence of ". ": lst
-lst = par.split(". ")
-
-# Create an empty list to store the sentences with capitalized first letter: lst_cap
-lst_cap = []
-
-# Capitalize the first letter of each sentence and append it to lst_cap
-for i in range(len(lst)):
-    lst_cap.append(lst[i].capitalize())
-
-# Joining all the sentences back together: par_cap
-par_cap = ". ".join(lst_cap)
-
-# Print the result
-print(par_cap)
-
-```
-
 *** =sct
 ```{python}
-# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+msg1 = """`split` generates a list of strings, not just a single string."""
 
+msg2 = """Yes!"""
 
-success_msg("Great work!")
+msg3 = """This code is correct except that the index in a list starts with 0."""
+
+test_mc(2, [msg1, msg2, msg3])
 ```
