@@ -168,7 +168,7 @@ par = "Ruckkehrunruhe is the feeling of returning home after an immersive trip o
 par = "Ruckkehrunruhe is the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness. You have to keep reminding yourself that it happened at all. However it felt so vivid just days ago."
 
 # Slice the word at every occurence of ".": lst
-lst = par.split("!")
+lst = par.split(".")
 
 # Print out each sentence ending with \n
 for snt in lst:
