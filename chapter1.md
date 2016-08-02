@@ -21,8 +21,8 @@ One of the most famous words from this dictionary is "sonder," the realization t
 
 *** =instructions
 - Find the length of "sonder." The syntax of Python's built-in function `len` is `len(s)` where `s` is a string.
-- Find the 5th character in "sonder." The syntax of the string object's operator "[]" is `s[n]` where `n` represents the index.
-- Find the 3rd-last character in "sonder," also using "[]."
+- Find the 5th character in "sonder." The syntax of the string object's operator `[ ]` is `s[n]` where `n` represents the index.
+- Find the 3rd-last character in "sonder," also using `[ ]`.
 
 *** =hint
 - You should call the command `len(s)` to create `l`.
@@ -65,7 +65,7 @@ l = len(s)
 char_5 = s[4]
 
 # Find the 3rd-last character of s: char_3_last
-char_5 = s[-3]
+char_3_last = s[-3]
 
 # Print out the result
 print(l, char_5, char_3_last)
