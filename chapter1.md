@@ -136,7 +136,7 @@ success_msg("Great work!")
 With the `split` method, you can also split a paragraph that has several sentences, and print them each on a new line. To do it, you can first break the paragraph into a list of each sentence using `.` as a delimiter. Then print out each sentence, ending with `\n` which in Python signifies starting a new line.
 
 *** =instructions
-- Use `split` to slice the definition of the word "Ruckkehrunruhe" at every occurence of "."
+- Use `split` to slice the definition of the word "Ruckkehrunruhe" (edited for training purpose) at every occurence of "."
 - Iterate over the list you get and add `\n` to each sentence.
 
 *** =hint
@@ -151,7 +151,7 @@ With the `split` method, you can also split a paragraph that has several sentenc
 *** =sample_code
 ```{python}
 # Assign the definition of "Ruckkehrunruhe" to the object par
-par = "ago!This feeling!makes you wish call cut!"
+par = "Ruckkehrunruhe is the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness. You have to keep reminding yourself that it happened at all. However it felt so vivid just days ago."
 
 # Slice the word at every occurence of "!": lst
 
@@ -165,7 +165,7 @@ par = "ago!This feeling!makes you wish call cut!"
 *** =solution
 ```{python}
 # Assign the definition of "Ruckkehrunruhe" to the object par
-par = "ago!This feeling!makes you wish call cut!"
+par = "Ruckkehrunruhe is the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness. You have to keep reminding yourself that it happened at all. However it felt so vivid just days ago."
 
 # Slice the word at every occurence of "!": lst
 lst = par.split("!")
