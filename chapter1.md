@@ -117,7 +117,7 @@ lst = s.slice("r")
 success_msg("Great work!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1 key:8b77a2e72b
+--- type:NormalExercise lang:python xp:100 skills:1 key:3319f86744
 ## Aplit Lines and Print on New Lines
 
 With the `split` method, you can also split a paragraph that has several sentences, and print them each on a new line. To do it, you can first break the paragraph into a list of each sentence using `.` as a delimiter. Then print out each sentence, ending with `\n` which in Python signifies starting a new line.
