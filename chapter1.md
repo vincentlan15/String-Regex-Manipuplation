@@ -207,7 +207,7 @@ Note that `join()` and `capitalize()` create a new string without changing the o
 # Assign the definition of "Ruckkehrunruhe" to the object par
 par = "ruckkehrunruhe is the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness. you have to keep reminding yourself that it happened at all. however it felt so vivid just days ago."
 
-# Slice the word at every occurence of ".": lst
+# Slice the word at every occurence of ". ": lst
 
 
 # Create an empty list to store the sentences with capitalized first letter: lst_cap
@@ -231,8 +231,8 @@ print(par_cap)
 # Assign the definition of "Ruckkehrunruhe" to the object par
 par = "ruckkehrunruhe is the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness. you have to keep reminding yourself that it happened at all. however it felt so vivid just days ago."
 
-# Slice the word at every occurence of ".": lst
-lst = par.split(".")
+# Slice the word at every occurence of ". ": lst
+lst = par.split(". ")
 
 # Create an empty list to store the sentences with capitalized first letter: lst_cap
 lst_cap = []
@@ -242,7 +242,7 @@ for i in range(len(lst)):
     lst_cap.append(lst[i].capitalize())
 
 # Joining all the sentences back together: par_cap
-par_cap = ".".join(lst_cap)
+par_cap = ". ".join(lst_cap)
 
 # Print the result
 print(par_cap)
