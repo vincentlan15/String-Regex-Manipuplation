@@ -80,8 +80,51 @@ print(l, char_5, char_3_last)
 success_msg("Great work!")
 ```
 
+--- type:NormalExercise lang:python xp:50 skills:1 key:8c8181cc6b
+## Slice Strings
+
+A particular long word on "The Dictionary of Obscure Sorrows" is Rückkehrunruhe, which refers to "the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness." Say you want to slice this word at every occurence of the character "r", and turn it to ["ückkeh", "un", "uhe"]. Use `split` to accompanish that.
+
+*** =instructions
+- Use `split` to slice the word "Rückkehrunruhe" at every occurence of "r." The syntax of the string object's built-in method `split` is `s.split(string)` where `s` is the string you want to split and `string` is the delimiter string.
+
+*** =hint
+- You should call `s.split("r")` to create `lst`.
+
+*** =pre_exercise_code
+```{python}
+
+```
+
+*** =sample_code
+```{python}
+# Assign Rückkehrunruhe to the object s
+s = "Rückkehrunruhe"
+
+# Slice the word at every occurence of r: lst
+
+
+```
+
+*** =solution
+```{python}
+# Assign Rückkehrunruhe to the object s
+s = "Rückkehrunruhe"
+
+# Slice the word at every occurence of r: lst
+lst = s.split("r")
+
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+success_msg("Great work!")
+
+```
+
 --- type:NormalExercise lang:python xp:100 skills:1 key:3319f86744
-## Aplit Lines and Print on New Lines
+## Split Lines and Print on New Lines
 
 With the `split` method, you can also split a paragraph that has several sentences, and print them each on a new line. To do it, you can first break the paragraph into a list of each sentence using `.` as a delimiter. Then print out each sentence, ending with `\n` which in Python signifies starting a new line.
 
@@ -116,8 +159,8 @@ par = "Rückkehrunruhe the feeling of returning home after an immersive trip onl
 # Assign the definition of "Rückkehrunruhe" to the object par
 par = "Rückkehrunruhe the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness. You have to keep reminding yourself that it happened at all, even though it felt so vivid just days ago. This feeling makes you wish you could smoothly cross-dissolve back into everyday life, or just hold the shutter open indefinitely and let one scene become superimposed on the next, so all your days would run together and you’d never have to call cut."
 
-# Slice the word at every occurence of ",": lst
-lst = par.split(",")
+# Slice the word at every occurence of ".": lst
+lst = par.split(".")
 
 # Print out each sentence ending with \n
 for snt in lst:
