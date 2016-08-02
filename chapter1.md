@@ -266,8 +266,9 @@ You received a string that contains a text message you want to collect, but it a
 
 *** =instructions
 - `text_clean = text.split(">>>START_HERE<<<")`
-- `lst = text.split(">>>START_HERE<<<")`
-  `text_clean = lst[1]`
+- `lst = text.split(">>>START_HERE<<<")
+  text_clean = lst[1]`
+- `text_clean = text.split(">>>START_HERE<<<")[2]`
 
 *** =hint
 - The syntax for `split` is `s.split(string)`, where `s` is the string you want to split and `string` is the delimiter string.
