@@ -239,7 +239,7 @@ lst_cap = []
 
 # Capitalize the first letter of each sentence and append it to lst_cap
 for i in range(len(lst)):
-    lst_cap[i].append(lst[i].capitalize())
+    lst_cap.append(lst[i].capitalize())
 
 # Joining all the sentences back together: par_cap
 par_cap = ".".join(lst_cap)
