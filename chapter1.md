@@ -104,8 +104,61 @@ s = "sonder"
 # Assign "Rückkehrunruhe" to the object s
 s = "sonder"
 
-# Slice the word at every occurence of r: lst
+# Slice the word at every occurence of "r": lst
 lst = s.slice("r")
+
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
+
+success_msg("Great work!")
+```
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:8b77a2e72b
+## Aplit Lines and Print on New Lines
+
+With the `split` method, you can also split a paragraph that has several sentences, and print them each on a new line. To do it, you can first break the paragraph into a list of each sentence using `.` as a delimiter. Then print out each sentence, ending with `\n` which in Python signifies starting a new line.
+
+*** =instructions
+- Use `split` to slice the definition of the word "Rückkehrunruhe" at every occurence of "."
+- Iterate over the list you get and add `\n` to each sentence.
+
+*** =hint
+- The syntax for `split` is `s.split(string)`, where `s` is the string you want to split and `string` is the delimiter string.
+- Use a for loop to print out every sentence of the list.
+
+*** =pre_exercise_code
+```{python}
+
+```
+
+*** =sample_code
+```{python}
+# Assign the definition of "Rückkehrunruhe" to the object par
+par = "Rückkehrunruhe the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness. You have to keep reminding yourself that it happened at all, even though it felt so vivid just days ago. This feeling makes you wish you could smoothly cross-dissolve back into everyday life, or just hold the shutter open indefinitely and let one scene become superimposed on the next, so all your days would run together and you’d never have to call cut."
+
+# Slice the word at every occurence of ",": lst
+
+
+# Print out each sentence ending with \n
+
+
+```
+
+*** =solution
+```{python}
+# Assign the definition of "Rückkehrunruhe" to the object par
+par = "Rückkehrunruhe the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness. You have to keep reminding yourself that it happened at all, even though it felt so vivid just days ago. This feeling makes you wish you could smoothly cross-dissolve back into everyday life, or just hold the shutter open indefinitely and let one scene become superimposed on the next, so all your days would run together and you’d never have to call cut."
+
+# Slice the word at every occurence of ",": lst
+lst = par.split(",")
+
+# Print out each sentence ending with \n
+for snt in lst:
+    print(snt+"\n")
 
 ```
 
