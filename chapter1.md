@@ -80,49 +80,6 @@ print(l, char_5, char_3_last)
 success_msg("Great work!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1 key:8b77a2e72b
-## Slice Strings
-
-A particular long word on "The Dictionary of Obscure Sorrows" is Rückkehrunruhe, which refers to "the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness." Say you want to slice this word at every occurence of the character "r", and turn it to ["ückkeh", "un", "uhe"]. Use `split` to accompanish that.
-
-*** =instructions
-- Use `split` to slice the word "Rückkehrunruhe" at every occurence of "r." The syntax of the string object's built-in method `split` is `s.split(string)` where `s` is the string you want to split and `string` is the delimiter string.
-
-*** =hint
-- You should call `s.split("r")` to create `lst`.
-
-*** =pre_exercise_code
-```{python}
-
-```
-
-*** =sample_code
-```{python}
-# Assign "Rückkehrunruhe" to the object s
-s = "sonder"
-
-# Slice the word at every occurence of r: lst
-
-
-```
-
-*** =solution
-```{python}
-# Assign "Rückkehrunruhe" to the object s
-s = "sonder"
-
-# Slice the word at every occurence of "r": lst
-lst = s.slice("r")
-
-```
-
-*** =sct
-```{python}
-# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
-success_msg("Great work!")
-
-```
-
 --- type:NormalExercise lang:python xp:100 skills:1 key:3319f86744
 ## Aplit Lines and Print on New Lines
 
