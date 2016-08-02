@@ -105,6 +105,9 @@ s = "Ruckkehrunruhe"
 # Slice the word at every occurence of r: lst
 
 
+# Print out the resulting list
+print(lst)
+
 ```
 
 *** =solution
@@ -115,6 +118,7 @@ s = "Ruckkehrunruhe"
 # Slice the word at every occurence of r: lst
 lst = s.split("r")
 
+# Print out the resulting list
 print(lst)
 ```
 
@@ -147,12 +151,13 @@ With the `split` method, you can also split a paragraph that has several sentenc
 *** =sample_code
 ```{python}
 # Assign the definition of "Ruckkehrunruhe" to the object par
-par = "Ruckkehrunruhe the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness. You have to keep reminding yourself that it happened at all, even though it felt so vivid just days ago. This feeling makes you wish you could smoothly cross-dissolve back into everyday life, or just hold the shutter open indefinitely and let one scene become superimposed on the next, so all your days would run together and you’d never have to call cut."
+par = "Try! Try! See!"
 
-# Slice the word at every occurence of ",": lst
+# Slice the word at every occurence of "!": lst
 
 
 # Print out each sentence ending with \n
+
 
 
 ```
@@ -160,10 +165,10 @@ par = "Ruckkehrunruhe the feeling of returning home after an immersive trip only
 *** =solution
 ```{python}
 # Assign the definition of "Ruckkehrunruhe" to the object par
-par = "Ruckkehrunruhe the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness. You have to keep reminding yourself that it happened at all, even though it felt so vivid just days ago. This feeling makes you wish you could smoothly cross-dissolve back into everyday life, or just hold the shutter open indefinitely and let one scene become superimposed on the next, so all your days would run together and you’d never have to call cut."
+par = "Try! Try! See!"
 
-# Slice the word at every occurence of ".": lst
-lst = par.split(".")
+# Slice the word at every occurence of "!": lst
+lst = par.split("!")
 
 # Print out each sentence ending with \n
 for snt in lst:
