@@ -185,16 +185,16 @@ success_msg("Great work!")
 
 Sometimes you get a paragraph of text where the first letter of each sentence is not capitalized. The method `capitalize()` can Capitalize the first letter of the whole string, but there are multiple sentences in a string, it only takes care of the first sentence. What can we do? Yes, you guessed it. We can use `split` to divide the paragraph into its sentences, use `capitalize()` to capitalize the first letter in each sentence, and then join all the individual sentences together!
 
-Note that `s.capitalize` creates a new string whose first letter is capitalized, and the original `s` will remain unchanged. You have to deal with that.
+Note that `join()` and `capitalize()` create a new string without changing the original ones. So you will have to explicitly assign the old string or list of strings to new ones.
 
 *** =instructions
-- Use `split` to slice the definition of the word "Ruckkehrunruhe" (edited for training purpose) at every occurence of ".".
-- Iterate over the sentences and change it to a new string created by `capitalize()`.
-- Join all the sentences back together with ".".
+- Use `split` to slice the definition of the word "Ruckkehrunruhe" (edited for training purpose) at every occurence of ". ". Remember you want to include the space after each period in the delimiter!
+- Iterate over all the sentences and change them to new strings created by `capitalize()`.
+- Join all the sentences back together with ". ".
 
 *** =hint
 - The syntax for `split` is `s.split(string)`, where `s` is the string you want to split and `string` is the delimiter string.
-- Use a for loop to go through every sentence.
+- Use its index to iterate over each element in `lst`, and assign the capitalized string to the element.
 - The syntax for `join` is `s.join(lst)`, where `s` is the string to put at the end of each string in `lst`.
 
 *** =pre_exercise_code
@@ -210,16 +210,19 @@ par = "ruckkehrunruhe is the feeling of returning home after an immersive trip o
 # Slice the word at every occurence of ".": lst
 
 
-# Capitalize the first letter of each sentence
+# Create an empty list to store the sentences with capitalized first letter: lst_cap
+lst_cap = []
+
+# Capitalize the first letter of each sentence and save it to lst_cap
 
 
 
 
-# Joining all the sentences back together
+# Joining all the sentences back together: par_cap
 
 
 # Print the result
-print(lst)
+print(par_cap)
 
 ```
 
@@ -231,15 +234,18 @@ par = "ruckkehrunruhe is the feeling of returning home after an immersive trip o
 # Slice the word at every occurence of ".": lst
 lst = par.split(".")
 
-# Capitalize the first letter of each sentence
-for snt in lst:
-    snt = snt.capitalize()
+# Create an empty list to store the sentences with capitalized first letter: lst_cap
+lst_cap = []
 
-# Joining all the sentences back together
-".".join(lst)
+# Capitalize the first letter of each sentence and save it to lst_cap
+for i in range(len(lst)):
+    lst_cap[i] = lst[i].capitalize()
+
+# Joining all the sentences back together: par_cap
+par_cap = ".".join(lst_cap)
 
 # Print the result
-print(lst)
+print(par_cap)
 
 ```
 
