@@ -165,7 +165,7 @@ par = "Ruckkehrunruhe is the feeling of returning home after an immersive trip o
 *** =solution
 ```{python}
 # Assign the definition of "Ruckkehrunruhe" to the object par
-par = "Ruckkehrunruhe is the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness! You have to keep reminding yourself that it happened at all, even though it felt so vivid just days ago! This feeling makes you wish you could smoothly cross-dissolve back into everyday life, or just hold the shutter open indefinitely and let one scene become superimposed on the next, so all your days would run together and you’d never have to call cut!"
+par = " ago! This feeling makes you wish you could smoothly cross-dissolve back into everyday life, or just hold the shutter open indefinitely and let one scene become superimposed on the next, so all your days would run together and you’d never have to call cut!"
 
 # Slice the word at every occurence of "!": lst
 lst = par.split("!")
