@@ -47,6 +47,10 @@ s = "sonder"
 
 # Find the 3rd-last character of s: char_3_last
 
+
+# Print out the result
+print(l, char_5, char_3_last)
+
 ```
 
 *** =solution
@@ -62,6 +66,9 @@ char_5 = s[4]
 
 # Find the 3rd-last character of s: char_3_last
 char_5 = s[-3]
+
+# Print out the result
+print(l, char_5, char_3_last)
 
 ```
 
@@ -112,8 +119,6 @@ lst = s.slice("r")
 *** =sct
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
-
-
 success_msg("Great work!")
 ```
 
