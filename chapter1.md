@@ -151,7 +151,7 @@ With the `split` method, you can also split a paragraph that has several sentenc
 *** =sample_code
 ```{python}
 # Assign the definition of "Ruckkehrunruhe" to the object par
-par = "ago! This feeling! makes you wish you could smoothly cross-dissolve back into everyday life so all your days would run together and you’d never have to call cut!"
+par = "ago!This feeling!makes you wish call cut!"
 
 # Slice the word at every occurence of "!": lst
 
@@ -165,7 +165,7 @@ par = "ago! This feeling! makes you wish you could smoothly cross-dissolve back 
 *** =solution
 ```{python}
 # Assign the definition of "Ruckkehrunruhe" to the object par
-par = "ago! This feeling! makes you wish you could smoothly cross-dissolve back into everyday life so all your days would run together and you’d never have to call cut!"
+par = "ago!This feeling!makes you wish call cut!"
 
 # Slice the word at every occurence of "!": lst
 lst = par.split("!")
