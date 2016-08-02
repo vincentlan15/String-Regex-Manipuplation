@@ -180,7 +180,7 @@ lst = ["uckkeh","un","uhe"]
 success_msg("Great work!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1 key:3319f86744
+--- type:NormalExercise lang:python xp:100 skills:1 key:1723f19db3
 ## Capitalize First Letters
 
 Sometimes you get a paragraph of text where the first letter of each sentence is not capitalized. The method `capitalize()` can Capitalize the first letter of the whole string, but there are multiple sentences in a string, it only takes care of the first sentence. What can we do? Yes, you guessed it. We can use `split` to divide the paragraph into its sentences, use `capitalize()` to capitalize the first letter in each sentence, and then join all the individual sentences together!
