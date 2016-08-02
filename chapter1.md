@@ -213,7 +213,7 @@ par = "ruckkehrunruhe is the feeling of returning home after an immersive trip o
 # Create an empty list to store the sentences with capitalized first letter: lst_cap
 lst_cap = []
 
-# Capitalize the first letter of each sentence and save it to lst_cap
+# Capitalize the first letter of each sentence and append it to lst_cap
 
 
 
@@ -237,9 +237,9 @@ lst = par.split(".")
 # Create an empty list to store the sentences with capitalized first letter: lst_cap
 lst_cap = []
 
-# Capitalize the first letter of each sentence and save it to lst_cap
+# Capitalize the first letter of each sentence and append it to lst_cap
 for i in range(len(lst)):
-    lst_cap[i] = lst[i].capitalize()
+    lst_cap[i].append(lst[i].capitalize())
 
 # Joining all the sentences back together: par_cap
 par_cap = ".".join(lst_cap)
