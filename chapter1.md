@@ -258,7 +258,7 @@ success_msg("Great work!")
 ```
 
 
---- type:MultipleChoiceExercise lang:python xp:100 skills:1 key:1723f19db3
+--- type:MultipleChoiceExercise lang:python xp:100 skills:1 key:3e74f114a8
 ## Displaying Text after Tagline
 
 You received a string that contains a text message you want to collect, but it also contains information about the text, separated from the actual content with ">>>START_HERE<<<". Enter "text" in the IPython Shell to see the full string. Which of the following codes can help you create an object `text_clean` that has only the text message?
