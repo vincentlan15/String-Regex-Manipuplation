@@ -185,9 +185,11 @@ success_msg("Great work!")
 
 Sometimes you get a paragraph of text where the first letter of each sentence is not capitalized. The method `capitalize()` can Capitalize the first letter of the whole string, but there are multiple sentences in a string, it only takes care of the first sentence. What can we do? Yes, you guessed it. We can use `split` to divide the paragraph into its sentences, use `capitalize()` to capitalize the first letter in each sentence, and then join all the individual sentences together!
 
+Note that `s.capitalize` creates a new string whose first letter is capitalized, and the original `s` will remain unchanged. You have to deal with that.
+
 *** =instructions
 - Use `split` to slice the definition of the word "Ruckkehrunruhe" (edited for training purpose) at every occurence of ".".
-- Iterate over the sentences to capitalize the first letters.
+- Iterate over the sentences and change it to a new string created by `capitalize()`.
 - Join all the sentences back together with ".".
 
 *** =hint
@@ -231,7 +233,7 @@ lst = par.split(".")
 
 # Capitalize the first letter of each sentence
 for snt in lst:
-    snt.capitalize()
+    snt = snt.capitalize()
 
 # Joining all the sentences back together
 ".".join(lst)
