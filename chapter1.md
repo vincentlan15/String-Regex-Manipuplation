@@ -1,8 +1,16 @@
 ---
-title       : Insert the chapter title here
-description : Insert the chapter description here
+title       : Basic String Manipulation
+description : In this chapter you will learn some basic techniques to deal with string objects. These include finding the length of the string, indexing the string, finding and changing part of the string, and formatting the string. They will give you a head start in text mining, so let's practice!  
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
+
+--- type:VideoExercise lang:python xp:50 skills:2 key:ef6777fad5
+## Getting to know your string
+- length of string: len(s)
+- string index: s[2]
+- find part of string: s.find(string) return index or -1
+- split a string: s.split(str="") split by space by default
+- join a string: s.join(string)
 
 --- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:8c8181cc6b
 ## A really bad movie
