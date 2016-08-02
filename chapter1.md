@@ -9,121 +9,110 @@ attachments :
 - length of string: len(s)
 - string index: s[2]
 - find part of string: s.find(string) return index or -1
-- split a string: s.split(str="") split by space by default
+- split a string: s.split(string) split by space by default
 - join a string: s.join(string)
 
---- type:MultipleChoiceExercise lang:python xp:50 skills:1 key:8c8181cc6b
-## A really bad movie
+--- type:NormalExercise lang:python xp:50 skills:1 key:8c8181cc6b
+## Finding the length of a string and indexing it
 
-Have a look at the plot that showed up in the viewer to the right. Which type of movies have the worst rating assigned to them?
+A website named ["The Dictionary of Obscure Sorrows"](http://www.dictionaryofobscuresorrows.com/) has been dedicated to making up words that describe the emotions that we all feel, but fail to communicate. In this course, we will use some entries on "The Dictionary of Obscure Sorrows" as examples.
 
-*** =instructions
-- Long movies, clearly
-- Short movies, clearly
-- Long movies, but the correlation seems weak
-- Short movies, but the correlation seems weak
-
-*** =hint
-Have a look at the plot. Do you see a trend in the dots?
-
-*** =pre_exercise_code
-```{r}
-# The pre exercise code runs code to initialize the user's workspace.
-# You can use it to load packages, initialize datasets and draw a plot in the viewer
-
-import pandas as pd
-import matplotlib.pyplot as plt
-
-movies = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
-
-plt.scatter(movies.runtime, movies.rating)
-plt.show()
-```
-
-*** =sct
-```{r}
-# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
-
-msg_bad = "That is not correct!"
-msg_success = "Exactly! The correlation is very weak though."
-test_mc(4, [msg_bad, msg_bad, msg_bad, msg_success])
-```
-
---- type:NormalExercise lang:python xp:100 skills:1 key:8b77a2e72b
-## Plot the movies yourself
-
-Do you remember the plot of the last exercise? Let's make an even cooler plot!
-
-A dataset of movies, `movies`, is available in the workspace.
+One of the most famous words from this dictionary is "sonder," the realization that each passerby has a life as vivid and complex as your own. Imagine that this word has just been created and you need to teach Python, never having encountered "sonder" before, to learn to recognize it by its length and the values in its 5th and 3rd-last characters. Use the techniques shown in the video to do that
 
 *** =instructions
-- The first function, `np.unique()`, uses the `unique()` function of the `numpy` package to get integer values for the movie genres. You don't have to change this code, just have a look!
-- Import `pyplot` in the `matplotlib` package. Set an alias for this import: `plt`.
-- Use `plt.scatter()` to plot `movies.runtime` onto the x-axis, `movies.rating` onto the y-axis and use `ints` for the color of the dots. You should use the first and second positional argument, and the `c` keyword.
-- Show the plot using `plt.show()`.
+- Find the length of "sonder." The syntax of Python's built-in function `len` is `len(s)` where `s` is a string.
+- Find the 5th character in "sonder." The syntax of the string object's operator "[]" is `s[n]` where `n` represents the index.
+- Find the 3rd-last character in "sonder," also using "[]."
 
 *** =hint
-- You don't have to program anything for the first instruction, just take a look at the first line of code.
-- Use `import ___ as ___` to import `matplotlib.pyplot` as `plt`.
-- Use `plt.scatter(___, ___, c = ___)` for the third instruction.
-- You'll always have to type in `plt.show()` to show the plot you created.
+- You should call the command `len(s)` to create `l`.
+- Remember that we count index starting from 0. So if you want to find the 5th character you should use `[n]`.
+- When we want to find characters from the end of the word, we add a `-` sign before the index, starting from `-1`.
 
 *** =pre_exercise_code
 ```{python}
-import pandas as pd
-movies = pd.read_csv("http://s3.amazonaws.com/assets.datacamp.com/course/introduction_to_r/movies.csv")
 
-import numpy as np
 ```
 
 *** =sample_code
 ```{python}
-# Get integer values for genres
-_, ints = np.unique(movies.genre, return_inverse = True)
+# Assign "sonder" to the object s
+s = "sonder"
 
-# Import matplotlib.pyplot
-
-
-# Make a scatter plot: runtime on  x-axis, rating on y-axis and set c to ints
+# Find the length of s: l
 
 
-# Show the plot
+# Find the 5th character of s: char_5
+
+
+# Find the 3rd-last character of s: char_3_last
 
 ```
 
 *** =solution
 ```{python}
-# Get integer values for genres
-_, ints = np.unique(movies.genre, return_inverse = True)
+# Assign "sonder" to the object s
+s = "sonder"
 
-# Import matplotlib.pyplot
-import matplotlib.pyplot as plt
+# Find the length of s: l
+l = len(s)
 
-# Make a scatter plot: runtime on  x-axis, rating on y-axis and set c to ints
-plt.scatter(movies.runtime, movies.rating, c=ints)
+# Find the 5th character of s: char_5
+char_5 = s[4]
 
-# Show the plot
-plt.show()
+# Find the 3rd-last character of s: char_3_last
+char_5 = s[-3]
+
 ```
 
 *** =sct
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
-test_function("numpy.unique",
-              not_called_msg = "Don't remove the call of `np.unique` to define `ints`.",
-              incorrect_msg = "Don't change the call of `np.unique` to define `ints`.")
 
-test_object("ints",
-            undefined_msg = "Don't remove the definition of the predefined `ints` object.",
-            incorrect_msg = "Don't change the definition of the predefined `ints` object.")
+success_msg("Great work!")
+```
 
-test_import("matplotlib.pyplot", same_as = True)
+--- type:NormalExercise lang:python xp:100 skills:1 key:8b77a2e72b
+## Slice Strings
 
-test_function("matplotlib.pyplot.scatter",
-              incorrect_msg = "You didn't use `plt.scatter()` correctly, have another look at the instructions.")
+A particular long word on "The Dictionary of Obscure Sorrows" is Rückkehrunruhe, which refers to "the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness." Say you want to slice this word at every occurence of the character "r", and turn it to ["ückkeh", "un", "uhe"]. Use `split` to accompanish that.
 
-test_function("matplotlib.pyplot.show")
+*** =instructions
+- Use `split` to slice the word "Rückkehrunruhe" at every occurence of "r." The syntax of the string object's built-in method `split` is `s.split(string)` where `s` is the string you want to split and `string` is the delimiter string.
+
+*** =hint
+- You should call `s.split("r")` to create `lst`.
+
+*** =pre_exercise_code
+```{python}
+
+```
+
+*** =sample_code
+```{python}
+# Assign "Rückkehrunruhe" to the object s
+s = "sonder"
+
+# Slice the word at every occurence of r: lst
+
+
+```
+
+*** =solution
+```{python}
+# Assign "Rückkehrunruhe" to the object s
+s = "sonder"
+
+# Slice the word at every occurence of r: lst
+lst = s.slice("r")
+
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
 
 success_msg("Great work!")
 ```
