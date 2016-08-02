@@ -153,7 +153,7 @@ With the `split` method, you can also split a paragraph that has several sentenc
 # Assign the definition of "Ruckkehrunruhe" to the object par
 par = "Ruckkehrunruhe is the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness. You have to keep reminding yourself that it happened at all. However it felt so vivid just days ago."
 
-# Slice the word at every occurence of "!": lst
+# Slice the word at every occurence of ".": lst
 
 
 # Print out each sentence ending with \n
@@ -167,7 +167,7 @@ par = "Ruckkehrunruhe is the feeling of returning home after an immersive trip o
 # Assign the definition of "Ruckkehrunruhe" to the object par
 par = "Ruckkehrunruhe is the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness. You have to keep reminding yourself that it happened at all. However it felt so vivid just days ago."
 
-# Slice the word at every occurence of "!": lst
+# Slice the word at every occurence of ".": lst
 lst = par.split("!")
 
 # Print out each sentence ending with \n
