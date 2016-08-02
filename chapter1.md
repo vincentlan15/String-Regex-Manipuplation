@@ -256,3 +256,81 @@ print(par_cap)
 
 success_msg("Great work!")
 ```
+
+
+--- type:MultipleChoiceExercise lang:python xp:100 skills:1 key:1723f19db3
+## Displaying Text after Tagline
+
+You received a string that contains a text message you want to collect, but it also contains information about the text, separated from the actual content with ">>>START_HERE<<<". Enter "text" in the IPython Shell to see the full string. Which of the following codes can help you create an object `text_clean` that has only the text message?
+
+
+*** =instructions
+- `text_clean = text.split(">>>START_HERE<<<")`
+- `lst = text.split(">>>START_HERE<<<")`
+  `text_clean = lst[1]`
+
+*** =hint
+- The syntax for `split` is `s.split(string)`, where `s` is the string you want to split and `string` is the delimiter string.
+- Use its index to iterate over each element in `lst`, and assign the capitalized string to the element.
+- The syntax for `join` is `s.join(lst)`, where `s` is the string to put at the end of each string in `lst`.
+
+*** =pre_exercise_code
+```{python}
+text="Time:17:06Jul07 Location:Cambridge,MA >>START_HERE<< Do you want to grab dinner?"
+
+```
+
+*** =sample_code
+```{python}
+# Assign the definition of "Ruckkehrunruhe" to the object par
+par = "ruckkehrunruhe is the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness. you have to keep reminding yourself that it happened at all. however it felt so vivid just days ago."
+
+# Slice the word at every occurence of ". ": lst
+
+
+# Create an empty list to store the sentences with capitalized first letter: lst_cap
+lst_cap = []
+
+# Capitalize the first letter of each sentence and append it to lst_cap
+
+
+
+
+# Joining all the sentences back together: par_cap
+
+
+# Print the result
+print(par_cap)
+
+```
+
+*** =solution
+```{python}
+# Assign the definition of "Ruckkehrunruhe" to the object par
+par = "ruckkehrunruhe is the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness. you have to keep reminding yourself that it happened at all. however it felt so vivid just days ago."
+
+# Slice the word at every occurence of ". ": lst
+lst = par.split(". ")
+
+# Create an empty list to store the sentences with capitalized first letter: lst_cap
+lst_cap = []
+
+# Capitalize the first letter of each sentence and append it to lst_cap
+for i in range(len(lst)):
+    lst_cap.append(lst[i].capitalize())
+
+# Joining all the sentences back together: par_cap
+par_cap = ". ".join(lst_cap)
+
+# Print the result
+print(par_cap)
+
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
+
+success_msg("Great work!")
+```
