@@ -94,12 +94,13 @@ A particular long word on "The Dictionary of Obscure Sorrows" is Rückkehrunruhe
 *** =pre_exercise_code
 ```{python}
 
+
 ```
 
 *** =sample_code
 ```{python}
-# Assign Rückkehrunruhe to the object s
-s = "Rückkehrunruhe"
+# Assign Ruckkehrunruhe to the object s
+s = "Ruckkehrunruhe"
 
 # Slice the word at every occurence of r: lst
 
@@ -108,19 +109,21 @@ s = "Rückkehrunruhe"
 
 *** =solution
 ```{python}
-# Assign Rückkehrunruhe to the object s
-s = "Rückkehrunruhe"
+# Assign Ruckkehrunruhe to the object s
+s = "Ruckkehrunruhe"
 
 # Slice the word at every occurence of r: lst
 lst = s.split("r")
 
+print(lst)
 ```
 
 *** =sct
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
-success_msg("Great work!")
 
+
+success_msg("Great work!")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:3319f86744
