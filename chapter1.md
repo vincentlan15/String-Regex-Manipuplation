@@ -131,17 +131,69 @@ success_msg("Great work!")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:3319f86744
-## Split Lines and Print on New Lines
+## Join Strings
 
-With the `split` method, you can also split a paragraph that has several sentences, and print them each on a new line. To do it, you can first break the paragraph into a list of each sentence using `.` as a delimiter. Then print out each sentence, ending with `\n` which in Python signifies starting a new line.
+Another method we often use on strings is `join` which, as the name suggests, is the opposite of `split`. `s.join(lst)` adds the string `s` after each string in the list `lst`. For instance, in the previous example, after slicing the "Ruckkehrunruhe" with "r", we got three fragments of the word. We can use `join` to add "h" to the end of each fragment and create a new word.  
 
 *** =instructions
-- Use `split` to slice the definition of the word "Ruckkehrunruhe" (edited for training purpose) at every occurence of "."
-- Iterate over the list you get and add `\n` to each sentence.
+- Use `join` to add "h" to the end of each fragment in the list `lst`.
+
+*** =hint
+- Use `join` on "." and take `lst` as the argument.
+
+*** =pre_exercise_code
+```{python}
+
+```
+
+*** =sample_code
+```{python}
+# Assign the fragements of "Ruckkehrunruhe" to the object lst
+lst = ["uckkeh","un","uhe"]
+
+# Join the "h" at the end of each word in lst: s2
+
+
+# Print out each sentence ending with \n
+
+
+```
+
+*** =solution
+```{python}
+# Assign the fragements of "Ruckkehrunruhe" to the object lst
+lst = ["uckkeh","un","uhe"]
+
+# Join the "h" at the end of each word in lst: s2
+
+
+# Print out each sentence ending with \n
+
+
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
+
+success_msg("Great work!")
+```
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:3319f86744
+## Capitalize First Letters
+
+Sometimes you get a paragraph of text where the first letter of each sentence is not capitalized. The method `capitalize()` can Capitalize the first letter of the whole string, but there are multiple sentences in a string, it only takes care of the first sentence. What can we do? Yes, you guessed it. We can use `split` to divide the paragraph into its sentences, use `capitalize()` to capitalize the first letter in each sentence, and then join all the individual sentences together!
+
+*** =instructions
+- Use `split` to slice the definition of the word "Ruckkehrunruhe" (edited for training purpose) at every occurence of ".".
+- Iterate over the sentences to capitalize the first letters.
+- Join all the sentences back together with ".".
 
 *** =hint
 - The syntax for `split` is `s.split(string)`, where `s` is the string you want to split and `string` is the delimiter string.
-- Use a for loop to print out every sentence of the list.
+- Use a for loop to go through every sentence.
+- The syntax for `join` is `s.join(lst)`, where `s` is the string to put at the end of each string in `lst`.
 
 *** =pre_exercise_code
 ```{python}
@@ -151,28 +203,41 @@ With the `split` method, you can also split a paragraph that has several sentenc
 *** =sample_code
 ```{python}
 # Assign the definition of "Ruckkehrunruhe" to the object par
-par = "Ruckkehrunruhe is the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness. You have to keep reminding yourself that it happened at all. However it felt so vivid just days ago."
+par = "ruckkehrunruhe is the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness. you have to keep reminding yourself that it happened at all. however it felt so vivid just days ago."
 
 # Slice the word at every occurence of ".": lst
 
 
-# Print out each sentence ending with \n
+# Capitalize the first letter of each sentence
 
 
+
+
+# Joining all the sentences back together
+
+
+# Print the result
+print(lst)
 
 ```
 
 *** =solution
 ```{python}
 # Assign the definition of "Ruckkehrunruhe" to the object par
-par = "Ruckkehrunruhe is the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness. You have to keep reminding yourself that it happened at all. However it felt so vivid just days ago."
+par = "ruckkehrunruhe is the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness. you have to keep reminding yourself that it happened at all. however it felt so vivid just days ago."
 
 # Slice the word at every occurence of ".": lst
 lst = par.split(".")
 
-# Print out each sentence ending with \n
+# Capitalize the first letter of each sentence
 for snt in lst:
-    print(snt+"\n")
+    snt.capitalize()
+
+# Joining all the sentences back together
+".".join(lst)
+
+# Print the result
+print(lst)
 
 ```
 
