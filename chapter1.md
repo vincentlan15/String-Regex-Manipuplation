@@ -80,7 +80,7 @@ print(l, char_5, char_3_last)
 success_msg("Great work!")
 ```
 
---- type:NormalExercise lang:python xp:50 skills:1 key:8c8181cc6b
+--- type:NormalExercise lang:python xp:50 skills:1 key:514818b19a
 ## Slice Strings
 
 A particular long word on "The Dictionary of Obscure Sorrows" is Rückkehrunruhe, which refers to "the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness." Say you want to slice this word at every occurence of the character "r", and turn it to ["ückkeh", "un", "uhe"]. Use `split` to accompanish that.
