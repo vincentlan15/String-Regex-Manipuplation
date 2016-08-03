@@ -398,7 +398,7 @@ print(new_text)
 success_msg("Great work!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1 key:c91a8bede7
+--- type:NormalExercise lang:python xp:100 skills:1 key:6569731b94
 ## Strip Away a New Line
 
 Dickens's editor thinks the opening of his book is a bit too long and wants to get rid of the last line. Please help her do so with the method `rstrip`. Remember the basic syntax of `rstrip` is `str.rstrip("string")`.
