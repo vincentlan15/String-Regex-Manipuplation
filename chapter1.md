@@ -347,6 +347,7 @@ success_msg("Great work!")
 ```
 
 
+
 --- type:NormalExercise lang:python xp:100 skills:1 key:c91a8bede7
 ## Replace String with a Count
 
@@ -386,6 +387,63 @@ new_text = text.replace("was","is",1)
 
 # Print out the resulting string
 print(new_text)
+
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
+
+success_msg("Great work!")
+```
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:c91a8bede7
+## Strip Away a New Line
+
+Dickens's editor thinks the opening of his book is a bit too long and wants to get rid of the last line. Please help her do so with the method `rstrip`. Remember the basic syntax of `rstrip` is `str.rstrip("string")`.
+
+*** =instructions
+- Use `rstrip` to delete `last_line` from `text`.
+
+*** =hint
+- Use `rstrip` on `text` to generate a new text.
+
+*** =pre_exercise_code
+```{python}
+
+```
+
+*** =sample_code
+```{python}
+# Assign the opening of "The Tale of Two Cities" to the object text
+text = "It was the best of times; it was the worst of times; it was the age of wisdom; it was the age of foolishness; it was the epoch of belief; it was the epoch of incredulity."
+
+# Assign the last line of to the object last_line
+last_line = "it was the epoch of belief; it was the epoch of incredulity."
+
+# Strip the last line away from the text: new_text
+
+
+# Print out the resulting string
+print(new_text)
+
+```
+
+*** =solution
+```{python}
+# Assign the opening of "The Tale of Two Cities" to the object text
+text = "It was the best of times; it was the worst of times; it was the age of wisdom; it was the age of foolishness; it was the epoch of belief; it was the epoch of incredulity."
+
+# Assign the last line of to the object last_line
+last_line = "it was the epoch of belief; it was the epoch of incredulity."
+
+# Strip the last line away from the text: new_text
+new_text = text.strip(last_line)
+
+# Print out the resulting string
+print(new_text)
+
 
 ```
 
