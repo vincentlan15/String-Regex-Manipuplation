@@ -401,13 +401,13 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1 key:6569731b94
 ## Strip Away a New Line
 
-Dickens's editor thinks the opening of his book is a bit too long and wants to get rid of the last line. Please help her do so with the method `rstrip`. Remember the basic syntax of `rstrip` is `str.rstrip("string")`.
+We have a damaged digital file of "The Tale of Two Cities," where the opening is mixed with "0"s. Try to get rid of these "0"s using `strip`. Remember the basic syntax of "0" is `str.strip(string)`
 
 *** =instructions
-- Use `rstrip` to delete `last_line` from `text`.
+- Use `strip` to delete `0` from `text`.
 
 *** =hint
-- Use `rstrip` on `text` to generate a new text.
+- Use `strip` on `text` to generate a new text.
 
 *** =pre_exercise_code
 ```{python}
@@ -417,12 +417,9 @@ Dickens's editor thinks the opening of his book is a bit too long and wants to g
 *** =sample_code
 ```{python}
 # Assign the opening of "The Tale of Two Cities" to the object text
-text = "It was the best of times; it was the worst of times; it was the age of wisdom; it was the age of foolishness; it was the epoch of belief; it was the epoch of incredulity."
+text = "00000It was the be0st of times; it was the worst of times; it was the age of 000wisdom; it was the age of foolishne0ss; it was the epoch of b0elief; it was the epoch of incredulity."
 
-# Assign the last line of to the object last_line
-last_line = "it was the epoch of belief; it was the epoch of incredulity."
-
-# Strip the last line away from the text: new_text
+# Strip the 0s away from the text: new_text
 
 
 # Print out the resulting string
@@ -433,13 +430,10 @@ print(new_text)
 *** =solution
 ```{python}
 # Assign the opening of "The Tale of Two Cities" to the object text
-text = "It was the best of times; it was the worst of times; it was the age of wisdom; it was the age of foolishness; it was the epoch of belief; it was the epoch of incredulity."
+text = "00000It was the be0st of times; it was the worst of times; it was the age of 000wisdom; it was the age of foolishne0ss; it was the epoch of b0elief; it was the epoch of incredulity."
 
-# Assign the last line of to the object last_line
-last_line = "it was the epoch of belief; it was the epoch of incredulity."
-
-# Strip the last line away from the text: new_text
-new_text = text.strip(last_line)
+# Strip the 0s away from the text: new_text
+new_text = text.strip("0")
 
 # Print out the resulting string
 print(new_text)
