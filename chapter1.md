@@ -485,3 +485,57 @@ msg4 = """Exactly!"""
 
 test_mc(4, [msg1, msg2, msg3, msg4])
 ```
+
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:6569731b94
+## Strip Away a New Line
+
+We have a damaged digital file of "The Tale of Two Cities," where the opening is mixed with "0"s at the beginning and end. Try to get rid of these "0"s using `strip`. Remember the basic syntax of "0" is `str.strip(string)`
+
+*** =instructions
+- Use `strip` to delete `0` from `text`.
+
+*** =hint
+- Use `strip` on `text` to generate a new text.
+
+*** =pre_exercise_code
+```{python}
+
+```
+
+*** =sample_code
+```{python}
+# Assign the opening of "The Tale of Two Cities" to the object text
+text = "00000It was the best of times; it was the worst of times; it was the age of wisdom; it was the age of foolishness; it was the epoch of b0elief; it was the epoch of incredulity.0000"
+
+# Strip the 0s away from the text: new_text
+
+
+# Print out the resulting string
+print(new_text)
+
+```
+
+*** =solution
+```{python}
+# Assign the opening of "The Tale of Two Cities" to the object text
+text = "00000It was the best of times; it was the worst of times; it was the age of wisdom; it was the age of foolishness; it was the epoch of b0elief; it was the epoch of incredulity.0000"
+
+# Strip the 0s away from the text: new_text
+new_text = text.strip("0")
+
+# Print out the resulting string
+print(new_text)
+
+
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
+
+success_msg("Great work!")
+```
+
+*The description of the part about format is a bit too vague. Can't figure out exactly what I'm supposed to teach the student because there's a lot you can do with `format()`*
