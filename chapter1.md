@@ -321,7 +321,7 @@ text = "It was the best of times; it was the worst of times; it was the age of w
 
 
 # Print out the resulting string
-Print(new_text)
+print(new_text)
 
 ```
 
@@ -334,7 +334,7 @@ text = "It was the best of times; it was the worst of times; it was the age of w
 text.replace("was","is")
 
 # Print out the resulting string
-Print(new_text)
+print(new_text)
 
 ```
 
