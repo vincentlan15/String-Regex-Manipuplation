@@ -448,7 +448,7 @@ print(new_text)
 
 success_msg("Great work!")
 ```
---- type:MultipleChoiceExercise lang:python xp:100 skills:1 key:3e74f114a8
+--- type:MultipleChoiceExercise lang:python xp:100 skills:1 key:16955fff5b
 ## Strip and Replace
 
 A coder starts with an object `string` whose content is "06x008600", and did the following actions to it:
