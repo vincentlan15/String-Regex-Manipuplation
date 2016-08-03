@@ -292,7 +292,7 @@ test_mc(2, [msg1, msg2, msg3])
 
 --- type:VideoExercise lang:python xp:50 skills:2 key:40f8c6581f
 ## Replace and Strip
-- replace: str.replace(old_string, new_string)
+- replace: str.replace(old_string, new_strin, count)
 - strip: str.strip(string)
 
 
@@ -332,6 +332,56 @@ text = "It was the best of times; it was the worst of times; it was the age of w
 
 # Replace every occurence of "was" with "is": new_text
 new_text = text.replace("was","is")
+
+# Print out the resulting string
+print(new_text)
+
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
+
+success_msg("Great work!")
+```
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:e115d724c0
+## Replace Part of a String with Another String
+
+Say you think that the line "It was the best of times; it was the worst of times" doesn't represent how you feel: We have already been through the worst of times, and now it's just the best of times. Thus, you want to change the first "was" to "is" but keep the second one. You can do that by adding a count as an argument after the old and new string.
+
+*** =instructions
+- Use `replace` to change "was" to "is" with a count of 1.
+
+*** =hint
+- The syntax for `replace` is `str.replace(old_string, new_string, count)`.
+
+*** =pre_exercise_code
+```{python}
+
+```
+
+*** =sample_code
+```{python}
+# Assign the first line of "The Tale of Two Cities" to the object text
+text = "It was the best of times; it was the worst of times."
+
+# Replace only the first occurence of "was" with "is": new_text
+
+
+# Print out the resulting string
+print(new_text)
+
+```
+
+*** =solution
+```{python}
+# Assign the first line of "The Tale of Two Cities" to the object text
+text = "It was the best of times; it was the worst of times."
+
+# Replace only the first occurence of "was" with "is": new_text
+new_text = text.replace("was","is",1)
 
 # Print out the resulting string
 print(new_text)
