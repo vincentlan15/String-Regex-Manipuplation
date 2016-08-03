@@ -347,7 +347,7 @@ success_msg("Great work!")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:e115d724c0
-## Replace Part of a String with Another String
+## Replace String with a Count
 
 Say you think that the line "It was the best of times; it was the worst of times" doesn't represent how you feel: We have already been through the worst of times, and now it's just the best of times. Thus, you want to change the first "was" to "is" but keep the second one. You can do that by adding a count as an argument after the old and new string.
 
