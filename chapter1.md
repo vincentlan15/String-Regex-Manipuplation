@@ -448,3 +448,40 @@ print(new_text)
 
 success_msg("Great work!")
 ```
+--- type:MultipleChoiceExercise lang:python xp:100 skills:1 key:3e74f114a8
+## Strip and Replace
+
+A coder starts with an object `string` whose content is "06x008600", and did the following actions to it:
+
+`string_1 = string.strip("0")`
+`string_2 = string_1.replace("6","60")`
+`string_3 = string_2.strip("0")`
+
+What will `string_3` be?
+
+*** =instructions
+- 6x0086
+- 060x00860
+- 60x00860
+- 60x0086
+
+*** =hint
+- Recall what `replace` and `strip` each do.
+
+*** =pre_exercise_code
+```{python}
+
+```
+
+*** =sct
+```{python}
+msg1 = """This will be the content of `stirng_1`."""
+
+msg2 = """Think more carefully."""
+
+msg3 = """This will be the content of `string_2`."""
+
+msg4 = """Exactly!"""
+
+test_mc(4, [msg1, msg2, msg3, msg4])
+```
