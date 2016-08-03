@@ -490,7 +490,7 @@ test_mc(4, [msg1, msg2, msg3, msg4])
 ```
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:6569731b94
+--- type:NormalExercise lang:python xp:100 skills:1 key:763f40b9a3
 ## Strip Away a New Line
 
 We have a damaged digital file of "The Tale of Two Cities," where the opening is mixed with "0"s at the beginning and end. Try to get rid of these "0"s using `strip`. Remember the basic syntax of "0" is `str.strip(string)`
