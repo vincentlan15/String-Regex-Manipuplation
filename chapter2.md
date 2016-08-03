@@ -1,23 +1,26 @@
 ---
-title       : Basic String Manipulation
-description : In this chapter you will learn some basic techniques to deal with string objects. These include finding the length of the string, indexing the string, finding and changing part of the string, and formatting the string. They will give you a head start in text mining, so let's practice!  
+title       : Regular Expressions
+description : When we talked about `replace` in last chapter, we had to input the exact text as an argument. However, in many cases, we want to search or replace a pattern, things like "words that begin with 'r'" or "strings that have a parenthesis in it." For these tasks, we would need regular expressions.
+
 attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
 --- type:VideoExercise lang:python xp:50 skills:2 key:ef6777fad5
-## Getting to know your string
-- length of string: len(s)
-- string index: s[2]
-- find part of string: s.find(string) return index or -1
-- split a string: s.split(string) split by space by default
-- join a string: s.join(string)
+## What are regular expressions?
+- match on characters
+- match begin of line
+- match end of line
+- match wildcard
+- match specific type of characters
+- re.match
+- re.findall()
 
 --- type:NormalExercise lang:python xp:50 skills:1 key:8c8181cc6b
 ## Finding the length of a string and indexing it
 
 A website named ["The Dictionary of Obscure Sorrows"](http://www.dictionaryofobscuresorrows.com/) has been dedicated to making up words that describe the emotions that we all feel, but fail to communicate. In this course, we will use some entries on "The Dictionary of Obscure Sorrows" as examples.
 
-One of the most famous words from this dictionary is "sonder," the realization that each passerby has a life as vivid and complex as your own. Imagine that this word has just been created and you need to teach Python, never having encountered "sonder" before, to learn to recognize it by its length and the values in its 5th and 3rd-last characters. Use the techniques shown in the video to do that.
+One of the most famous words from this dictionary is "sonder," the realization that each passerby has a life as vivid and complex as your own. Imagine that this word has just been created and you need to teach Python, never having encountered "sonder" before, to learn to recognize it by its length and the values in its 5th and 3rd-last characters. Use the techniques shown in the video to do that
 
 *** =instructions
 - Find the length of "sonder." The syntax of Python's built-in function `len` is `len(s)` where `s` is a string.
@@ -81,7 +84,7 @@ success_msg("Great work!")
 ```
 
 --- type:NormalExercise lang:python xp:50 skills:1 key:514818b19a
-## Slicing strings
+## Slice Strings
 
 A particular long word on "The Dictionary of Obscure Sorrows" is Ruckkehrunruhe, which refers to "the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness." Say you want to slice this word at every occurence of the character "r", and turn it to ["uckkeh", "un", "uhe"]. Use `split` to accompanish that.
 
@@ -131,7 +134,7 @@ success_msg("Great work!")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:3319f86744
-## Joining strings
+## Join Strings
 
 Another method we often use on strings is `join` which, as the name suggests, is the opposite of `split`. `s.join(lst)` adds the string `s` after each string in the list `lst`. For instance, in the previous example, after slicing the "Ruckkehrunruhe" with "r", we got three fragments of the word. We can use `join` to add "h" to the end of each fragment and create a new word.  
 
@@ -181,7 +184,7 @@ success_msg("Great work!")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:1723f19db3
-## Capitalizing first letters
+## Capitalize First Letters
 
 Sometimes you get a paragraph of text where the first letter of each sentence is not capitalized. The method `capitalize()` can Capitalize the first letter of the whole string, but there are multiple sentences in a string, it only takes care of the first sentence. What can we do? Yes, you guessed it. We can use `split` to divide the paragraph into its sentences, use `capitalize()` to capitalize the first letter in each sentence, and then join all the individual sentences together!
 
@@ -291,13 +294,13 @@ test_mc(2, [msg1, msg2, msg3])
 ```
 
 --- type:VideoExercise lang:python xp:50 skills:2 key:40f8c6581f
-## Replacing and Stripping
+## Replace and Strip
 - replace: str.replace(old_string, new_strin, count)
 - strip: str.strip(string)
 
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:e115d724c0
-## Replacing Part of a String with Another String
+## Replace Part of a String with Another String
 
 Charles Dickens's novel "The Tale of the Two Cities" famously begins with the line:"It was the best of times; it was the worst of times; it was the age of wisdom; it was the age of foolishness; it was the epoch of belief; it was the epoch of incredulity." Now, try to use `replace` to change "was" in this sentence to "is." Remember that the syntax of `replace` is `str.replace(old_string,new_string)`.
 
@@ -349,7 +352,7 @@ success_msg("Great work!")
 
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:c91a8bede7
-## Replacing String with a Count
+## Replace String with a Count
 
 Say you think that the line "It was the best of times; it was the worst of times" doesn't represent how you feel: We have already been through the worst of times, and now it's just the best of times. Thus, you want to change the first "was" to "is" but keep the second one. You can do that by adding a count as an argument after the old and new string.
 
@@ -449,7 +452,7 @@ print(new_text)
 success_msg("Great work!")
 ```
 --- type:MultipleChoiceExercise lang:python xp:100 skills:1 key:16955fff5b
-## Stripping and Replacing
+## Strip and Replace
 
 A coder starts with an object `string` whose content is "06x008600", and did the following actions to it:
 
@@ -488,7 +491,7 @@ test_mc(4, [msg1, msg2, msg3, msg4])
 
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:6569731b94
-## Stripping Away a New Line
+## Strip Away a New Line
 
 We have a damaged digital file of "The Tale of Two Cities," where the opening is mixed with "0"s at the beginning and end. Try to get rid of these "0"s using `strip`. Remember the basic syntax of "0" is `str.strip(string)`
 
