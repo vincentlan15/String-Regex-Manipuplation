@@ -488,7 +488,7 @@ test_mc(4, [msg1, msg2, msg3, msg4])
 
 
 <<<<<<< HEAD
---- type:NormalExercise lang:python xp:100 skills:1 key:6569731b94
+--- type:NormalExercise lang:python xp:100 skills:1 key:c578947af7
 ## Stripping Away a New Line
 =======
 --- type:NormalExercise lang:python xp:100 skills:1 key:122a0c94f9
