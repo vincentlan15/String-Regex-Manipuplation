@@ -347,7 +347,7 @@ success_msg("Great work!")
 ```
 
 <<<<<<< HEAD
---- type:NormalExercise lang:python xp:100 skills:1 key:e115d724c0
+--- type:NormalExercise lang:python xp:100 skills:1 key:c91a8bede7
 ## Replace String with a Count
 =======
 --- type:NormalExercise lang:python xp:100 skills:1 key:669127f21f
