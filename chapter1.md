@@ -401,7 +401,7 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1 key:6569731b94
 ## Strip Away a New Line
 
-We have a damaged digital file of "The Tale of Two Cities," where the opening is mixed with "0"s. Try to get rid of these "0"s using `strip`. Remember the basic syntax of "0" is `str.strip(string)`
+We have a damaged digital file of "The Tale of Two Cities," where the opening is mixed with "0"s at the beginning and end. Try to get rid of these "0"s using `strip`. Remember the basic syntax of "0" is `str.strip(string)`
 
 *** =instructions
 - Use `strip` to delete `0` from `text`.
@@ -417,7 +417,7 @@ We have a damaged digital file of "The Tale of Two Cities," where the opening is
 *** =sample_code
 ```{python}
 # Assign the opening of "The Tale of Two Cities" to the object text
-text = "00000It was the be0st of times; it was the worst of times; it was the age of 000wisdom; it was the age of foolishne0ss; it was the epoch of b0elief; it was the epoch of incredulity."
+text = "00000It was the best of times; it was the worst of times; it was the age of wisdom; it was the age of foolishness; it was the epoch of b0elief; it was the epoch of incredulity.0000"
 
 # Strip the 0s away from the text: new_text
 
@@ -430,7 +430,7 @@ print(new_text)
 *** =solution
 ```{python}
 # Assign the opening of "The Tale of Two Cities" to the object text
-text = "00000It was the be0st of times; it was the worst of times; it was the age of 000wisdom; it was the age of foolishne0ss; it was the epoch of b0elief; it was the epoch of incredulity."
+text = "00000It was the best of times; it was the worst of times; it was the age of wisdom; it was the age of foolishness; it was the epoch of b0elief; it was the epoch of incredulity.0000"
 
 # Strip the 0s away from the text: new_text
 new_text = text.strip("0")
