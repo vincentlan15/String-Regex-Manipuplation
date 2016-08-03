@@ -289,3 +289,59 @@ msg3 = """This code is correct except that the index in a list starts with 0."""
 
 test_mc(2, [msg1, msg2, msg3])
 ```
+
+--- type:VideoExercise lang:python xp:50 skills:2 key:ef6777fad5
+## Replace and Strip
+- replace: str.replace(old_string, new_string)
+- strip: str.strip(string)
+
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:1723f19db3
+## Replace Part of a String with Another String
+
+Charles Dickens's novel "The Tale of the Two Cities" famously begins with the line:"It was the best of times; it was the worst of times; it was the age of wisdom; it was the age of foolishness; it was the epoch of belief; it was the epoch of incredulity." Now, try to use `replace` to change "was" in this sentence to "is." Remember that the syntax of `replace` is `str.replace(old_string,new_string)`.
+
+*** =instructions
+- Use `replace` to change "was" to "is" in the string `text`.
+
+*** =hint
+- Use the method `replace` on `text` and take the old string and the new string as arguments.
+
+*** =pre_exercise_code
+```{python}
+
+```
+
+*** =sample_code
+```{python}
+# Assign the opening of "The Tale of Two Cities" to the object text
+text = "It was the best of times; it was the worst of times; it was the age of wisdom; it was the age of foolishness; it was the epoch of belief; it was the epoch of incredulity."
+
+# Replace every occurence of "was" with "is"
+
+
+# Print out the resulting string
+Print(text)
+
+```
+
+*** =solution
+```{python}
+# Assign the opening of "The Tale of Two Cities" to the object text
+text = "It was the best of times; it was the worst of times; it was the age of wisdom; it was the age of foolishness; it was the epoch of belief; it was the epoch of incredulity."
+
+# Replace every occurence of "was" with "is"
+text.replace("was","is")
+
+# Print out the resulting string
+Print(text)
+
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
+
+success_msg("Great work!")
+```
