@@ -317,11 +317,11 @@ Charles Dickens's novel "The Tale of the Two Cities" famously begins with the li
 # Assign the opening of "The Tale of Two Cities" to the object text
 text = "It was the best of times; it was the worst of times; it was the age of wisdom; it was the age of foolishness; it was the epoch of belief; it was the epoch of incredulity."
 
-# Replace every occurence of "was" with "is"
+# Replace every occurence of "was" with "is": new_text
 
 
 # Print out the resulting string
-Print(text)
+Print(new_text)
 
 ```
 
@@ -330,11 +330,11 @@ Print(text)
 # Assign the opening of "The Tale of Two Cities" to the object text
 text = "It was the best of times; it was the worst of times; it was the age of wisdom; it was the age of foolishness; it was the epoch of belief; it was the epoch of incredulity."
 
-# Replace every occurence of "was" with "is"
+# Replace every occurence of "was" with "is": new_text
 text.replace("was","is")
 
 # Print out the resulting string
-Print(text)
+Print(new_text)
 
 ```
 
