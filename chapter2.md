@@ -503,7 +503,7 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1 key:5723a6e978
 ## Find repeated sequence
 
-What if you are not only looking for repeated letters, but repeated sequence? For instance instead of looking for C, CC, CCC... you want to look for CG, CGCG, CGCGCG... You can group several letters together in `()`, and then search them as a unit. When you use `*` or `+`, Python searches for repetitions of the whole unit. Now, use this method to search for repetitions of `AT` using both `+` and `*`.   
+What if you are not only looking for repeated letters, but repeated sequence? For instance instead of looking for "C", "CC", "CCC"... you want to look for "CG", "CGCG", "CGCGCG"... You can group several letters together in `()`, and then search them as a unit. When you use `*` or `+`, Python searches for repetitions of the whole unit. Now, use this method to search for repetitions of "AT" using both `+` and `*`.   
 
 *** =instructions
 - Search for "AT" in `seq` using `+`.
@@ -555,6 +555,64 @@ results2 = re.search("(AT)*",seq)
 
 # Print out both results
 print(results1,results2)
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
+
+success_msg("Great work!")
+```
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:5723a6e978
+## Matching an optional letter
+
+Now it gets a bit more tricky: you are looking for two "A"s that are either consecutive or separated by a "G". How can you do that? A method we learned before, of course, is "AA|AGA", but now with the new `?` operator, we have a simpler way to express "the 'G' between the two 'A's is optional." How exactly should the expression be? We leave the challenge to you.   
+
+*** =instructions
+- Search in `seq` for two "A"s that are either consecutive or sepearted by a "G".
+- Print out the results
+
+*** =hint
+- The search pattern should be `AG?A`.
+- You don't need to change the code for the print statement that we provided.
+
+*** =pre_exercise_code
+```{python}
+
+```
+
+*** =sample_code
+```{python}
+# Import re
+import re
+
+# Assign the gene sequence to seq
+seq = "ATGCTTCGGCAAGACTCAAAAAATA"
+
+# Search for the pattern using ?: results
+
+
+# Print out the results
+print(____)
+
+```
+
+*** =solution
+```{python}
+# Import re
+import re
+
+# Assign the gene sequence to seq
+seq = "ATGCTTCGGCAAGACTCAAAAAATA"
+
+# Search for the pattern using ?: results
+results = re.search("AG?A",seq)
+
+# Print out the results
+print(results)
+
 ```
 
 *** =sct
