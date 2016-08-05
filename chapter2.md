@@ -565,7 +565,7 @@ print(results1,results2)
 success_msg("Great work!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1 key:5723a6e978
+--- type:NormalExercise lang:python xp:100 skills:1 key:dd4e809615
 ## Matching an optional letter
 
 Now it gets a bit more tricky: you are looking for two "A"s that are either consecutive or separated by a "G". How can you do that? A method we learned before, of course, is "AA|AGA", but now with the new `?` operator, we have a simpler way to express "the 'G' between the two 'A's is optional." How exactly should the expression be? We leave the challenge to you.   
