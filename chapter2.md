@@ -738,3 +738,36 @@ print(results)
 
 success_msg("Great work!")
 ```
+--- type:MultipleChoiceExercise lang:python xp:100 skills:1 key:3e74f114a8
+## All together now!
+
+Now it's time to put all the patterns we learned together! See if you can understand which text the following regular expression will match with:
+`"(0.*)+9|7+[332]*"`
+
+*** =instructions
+- "7903322"
+- "3325789"
+- "3372950"
+
+*** =hint
+- Think carefully what the pattern means.
+
+*** =pre_exercise_code
+```{python}
+text="Time:17:06Jul07 Location:Cambridge,MA >>START_HERE<< Do you want to grab dinner?"
+
+```
+
+*** =sct
+```{python}
+msg1 = """`\s+` means space. It is not related to the letter `s`."""
+
+msg2 = """Pay attention to `\"`, `\(` and other expressions for punctuations."""
+
+msg3 = """Pay attention to all the `\s+` that signifies a space."""
+
+msg4 = """Exactly!"""
+
+
+test_mc(4, [msg1, msg2, msg3, msg4])
+```
