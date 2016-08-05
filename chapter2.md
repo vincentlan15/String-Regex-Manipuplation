@@ -681,7 +681,7 @@ print(results)
 success_msg("Great work!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1 key:e3ef684864
+--- type:NormalExercise lang:python xp:100 skills:1 key:88f50bd260
 ## Using "[]" and "*" together
 
 Another powerful combination is "[]" and "*". What will this match with? Yes, it will match with consucutive characters that are all in our set. Now, use this to search for the combination of "A" and "G" in our gene sequence.    
