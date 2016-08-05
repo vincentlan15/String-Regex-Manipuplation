@@ -393,7 +393,7 @@ print(results)
 success_msg("Great work!")
 ```
 
---- type:MultipleChoiceExercise lang:python xp:100 skills:1 key:3e74f114a8
+--- type:MultipleChoiceExercise lang:python xp:100 skills:1 key:06f58e3279
 ## What does this mean?
 
 Find a string that will match with the following regular expression when using `re.search()`.
