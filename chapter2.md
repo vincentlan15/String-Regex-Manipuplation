@@ -229,7 +229,7 @@ import re
 results = re.match("ATG",seq)
 
 # Print out the results
-print(____)
+print(results)
 
 ```
 
