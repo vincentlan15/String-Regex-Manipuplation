@@ -623,7 +623,7 @@ print(results)
 success_msg("Great work!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1 key:dd4e809615
+--- type:NormalExercise lang:python xp:100 skills:1 key:e3ef684864
 ## Using "." and "*" together
 
 We learned earlier that "." can be used to match any character. Now that we have learned "*", we can use the two together to create powerful search patterns. A pattern such as "A.*G", for instance, means "an A followed by anything, and then G." Now use this technique to find *all occurences* of a C appearing before a G in the gene sequence we've been working on.   
