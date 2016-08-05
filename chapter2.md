@@ -626,14 +626,14 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1 key:e3ef684864
 ## Using "." and "*" together
 
-We learned earlier that "." can be used to match any character. Now that we have learned "*", we can use the two together to create powerful search patterns. A pattern such as "A.*G", for instance, means "an A followed by anything, and then G." Now use this technique to find *all occurences* of a G appearing before a C in the gene sequence we've been working on.   
+We learned earlier that "." can be used to match any character. Now that we have learned "*", we can use the two together to create powerful search patterns. A pattern such as "A.*G", for instance, means "an A followed by anything, and then G." Now use this technique to serach for a G appearing before a C in the gene sequence we've been working on.   
 
 *** =instructions
-- Search in `seq` for *all* occurences of a "G" appearing before a "C".
+- Search in `seq` for the occurences of a "G" appearing before a "C".
 - Print out the results
 
 *** =hint
-- The search pattern should be `C.+G`.
+- The search pattern should be `G.+C`.
 - You don't need to change the code for the print statement that we provided.
 
 *** =pre_exercise_code
@@ -649,7 +649,7 @@ import re
 # Assign the gene sequence to seq
 seq = "ATGCTTCGGCAAGACTCAAAAAATA"
 
-# Search for ALL OCCURENCES of the pattern: results
+# Search for the assigned pattern: results
 
 
 # Print out the results
@@ -665,11 +665,69 @@ import re
 # Assign the gene sequence to seq
 seq = "ATGCTTCGGCAAGACTCAAAAAATA"
 
-# Search for ALL OCCURENCES of the pattern: results
-results = re.findall("C.+G",seq)
+# Search for the assigned pattern: results
+results = re.match("G.+C",seq)
 
 # Print out the results
 print(results)
+
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
+
+success_msg("Great work!")
+```
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:e3ef684864
+## Using "[]" and "*" together
+
+Another powerful combination is "[]" and "*". What will this match with? Yes, it will match with consucutive characters that are all in our set. Now, use this to search for the combination of "A" and "G" in our gene sequence.    
+
+*** =instructions
+- Search in `seq` for the occurences of a "A", "G" combination.
+- Print out the results
+
+*** =hint
+- The search pattern should be `"[AG]*"`.
+- You don't need to change the code for the print statement that we provided.
+
+*** =pre_exercise_code
+```{python}
+
+```
+
+*** =sample_code
+```{python}
+# Import re
+import re
+
+# Assign the gene sequence to seq
+seq = "ATGCTTCGGCAAGACTCAAAAAATA"
+
+# Search for the assigned pattern: results
+
+
+# Print out the results
+print(____)
+
+```
+
+*** =solution
+```{python}
+# Import re
+import re
+
+# Assign the gene sequence to seq
+seq = "ATGCTTCGGCAAGACTCAAAAAATA"
+
+# Search for the assigned pattern: results
+results = re.search("[AG]*", seq)
+
+# Print out the results
+print(____)
 
 ```
 
