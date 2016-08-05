@@ -568,14 +568,14 @@ success_msg("Great work!")
 --- type:NormalExercise lang:python xp:100 skills:1 key:dd4e809615
 ## Matching an optional letter
 
-Now it gets a bit more tricky: you are looking for two "A"s that are either consecutive or separated by a "G". How can you do that? A method we learned before, of course, is "AA|AGA", but now with the new `?` operator, we have a simpler way to express "the 'G' between the two 'A's is optional." How exactly should the expression be? We leave the challenge to you.   
+Now it gets a bit more tricky: you are looking for a "T" and a "C" that are either consecutive or separated by a "G". How can you do that? A method we learned before, of course, is "TC|TGC", but now with the new `?` operator, we have a simpler way to express "the 'G' between the two other letters is optional." How exactly should the expression be? We leave the challenge to you.   
 
 *** =instructions
-- Search in `seq` for *all* occurences of two "A"s either consecutive or sepearted by a "G".
+- Search in `seq` for *all* occurences of "T" and "C" either consecutive or sepearted by a "G".
 - Print out the results
 
 *** =hint
-- The search pattern should be `AG?A`.
+- The search pattern should be `TG?C`.
 - You don't need to change the code for the print statement that we provided.
 
 *** =pre_exercise_code
@@ -607,8 +607,8 @@ import re
 # Assign the gene sequence to seq
 seq = "ATGCTTCGGCAAGACTCAAAAAATA"
 
-# Search for ALL OCCURENCES the pattern using ?: results
-results = re.findall("AG?A",seq)
+# Search for ALL OCCURENCES of the pattern using ?: results
+results = re.findall("TG?C",seq)
 
 # Print out the results
 print(results)
