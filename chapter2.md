@@ -427,61 +427,28 @@ msg4 = """Exactly!"""
 
 test_mc(4, [msg1, msg2, msg3, msg4])
 ```
---- type:MultipleChoiceExercise lang:python xp:100 skills:1 key:16955fff5b
-## Strip and Replace
-
-A coder starts with an object `string` whose content is "06x008600", and did the following actions to it:
-
-`string_1 = string.strip("0")`
-`string_2 = string_1.replace("6","60")`
-`string_3 = string_2.strip("0")`
-
-What will `string_3` be?
-
-*** =instructions
-- 6x0086
-- 060x00860
-- 60x00860
-- 60x0086
-
-*** =hint
-- Recall what `replace` and `strip` each do.
-
-*** =pre_exercise_code
-```{python}
-
-```
-
-*** =sct
-```{python}
-msg1 = """This will be the content of `stirng_1`."""
-
-msg2 = """Think more carefully."""
-
-msg3 = """This will be the content of `string_2`."""
-
-msg4 = """Exactly!"""
-
-test_mc(4, [msg1, msg2, msg3, msg4])
-```
-
 
 --- type:VideoExercise lang:python xp:50 skills:2 key:d46e7bc1da
-## Replace and Strip
-- replace: str.replace(old_string, new_strin, count)
-- strip: str.strip(string)
+## Pattern Repetition
+- * repetition of previous pattern
+- + one or more pattern
+- ? 0 or not the preceeding pattern
 
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:536588d87c
-## Replace Part of a String with Another String
+## Find gene sequence pattern
 
-Charles Dickens's novel "The Tale of the Two Cities" famously begins with the line:"It was the best of times; it was the worst of times; it was the age of wisdom; it was the age of foolishness; it was the epoch of belief; it was the epoch of incredulity." Now, try to use `replace` to change "was" in this sentence to "is." Remember that the syntax of `replace` is `str.replace(old_string,new_string)`.
+In the gene sequence we have worked with, search for "C+" and "C*". Think before you submit the answer which pattern(s) will match. 
 
 *** =instructions
-- Use `replace` to change "was" to "is" in the string `text`.
+- Search for "C+" in `seq`.
+- Search for "C*" in `seq`.
+- Print out both results
 
 *** =hint
-- Use the method `replace` on `text` and take the old string and the new string as arguments.
+- Use `re.search()` to search for "C+" as the pattern.
+- Use `re.search()` to search for "C*" as the pattern.
+- You don't need to change the code for the print statement that we provided.
 
 *** =pre_exercise_code
 ```{python}
@@ -490,28 +457,39 @@ Charles Dickens's novel "The Tale of the Two Cities" famously begins with the li
 
 *** =sample_code
 ```{python}
-# Assign the opening of "The Tale of Two Cities" to the object text
-text = "It was the best of times; it was the worst of times; it was the age of wisdom; it was the age of foolishness; it was the epoch of belief; it was the epoch of incredulity."
+# Import re
+import re
 
-# Replace every occurence of "was" with "is": new_text
+# Assign the gene sequence to seq
+seq = "ATGCTTCGGCAAGACTCAAAAAATA"
+
+# Search for C+: results1
 
 
-# Print out the resulting string
-print(new_text)
+# Search for C*: results2
+
+
+# Print out both results
+print(____,____)
 
 ```
 
 *** =solution
 ```{python}
-# Assign the opening of "The Tale of Two Cities" to the object text
-text = "It was the best of times; it was the worst of times; it was the age of wisdom; it was the age of foolishness; it was the epoch of belief; it was the epoch of incredulity."
+# Import re
+import re
 
-# Replace every occurence of "was" with "is": new_text
-new_text = text.replace("was","is")
+# Assign the gene sequence to seq
+seq = "ATGCTTCGGCAAGACTCAAAAAATA"
 
-# Print out the resulting string
-print(new_text)
+# Search for C+: results1
+results1 = re.search("C+",seq)
 
+# Search for C*: results2
+results2 = re.search("C*",seq)
+
+# Print out both results
+print(results1,results2)
 ```
 
 *** =sct
