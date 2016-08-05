@@ -322,7 +322,7 @@ print(____)
 import re
 
 # Search for wisdom and stupidity in text: results
-results = re.search("wisdom|stupidity")
+results = re.search("wisdom|stupidity", text)
 
 # Print the results
 print(results)
