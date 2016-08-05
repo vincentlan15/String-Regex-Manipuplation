@@ -16,21 +16,19 @@ attachments :
 - re.findall()
 
 --- type:NormalExercise lang:python xp:50 skills:1 key:8c8181cc6b
-## Finding the length of a string and indexing it
+## Searching for a sequence of string
 
-A website named ["The Dictionary of Obscure Sorrows"](http://www.dictionaryofobscuresorrows.com/) has been dedicated to making up words that describe the emotions that we all feel, but fail to communicate. In this course, we will use some entries on "The Dictionary of Obscure Sorrows" as examples.
-
-One of the most famous words from this dictionary is "sonder," the realization that each passerby has a life as vivid and complex as your own. Imagine that this word has just been created and you need to teach Python, never having encountered "sonder" before, to learn to recognize it by its length and the values in its 5th and 3rd-last characters. Use the techniques shown in the video to do that
+Biologists often need to look at sequences of nucleotides within a DNA molecule to determine the properties and function of the DNA. Quite often though, these sequences can be very long and seemingly random, and a search using regular expressions can be helpful. In this exercise, use `re.search()` to help a biologist find out if the pattern "AGA" exists in a sequence he is working on.
 
 *** =instructions
-- Find the length of "sonder." The syntax of Python's built-in function `len` is `len(s)` where `s` is a string.
-- Find the 5th character in "sonder." The syntax of the string object's operator `[ ]` is `s[n]` where `n` represents the index.
-- Find the 3rd-last character in "sonder," also using `[ ]`.
+- Import the regular expression package `re`.
+- Use `re.search()` to find "AGA" in the sequence `seq`.
+- Print out the `results`.
 
 *** =hint
-- You should call the command `len(s)` to create `l`.
-- Remember that we count index starting from 0. So if you want to find the 5th character you should use `[n]`.
-- When we want to find characters from the end of the word, we add a `-` sign before the index, starting from `-1`.
+- The command to import package x is `import x`.
+- The basic syntax of `re.search` is `re.search(pattern, string)`.
+- You don't need to change the code for the `print` statement that we provided.
 
 *** =pre_exercise_code
 ```{python}
@@ -39,39 +37,34 @@ One of the most famous words from this dictionary is "sonder," the realization t
 
 *** =sample_code
 ```{python}
-# Assign "sonder" to the object s
-s = "sonder"
-
-# Find the length of s: l
+# Import re
 
 
-# Find the 5th character of s: char_5
+# Assign the sequence to the object seq
+seq = "ATGCTTCGGCAAGACTCAAAAAATA"
+
+# Search for AGA: results
 
 
-# Find the 3rd-last character of s: char_3_last
+# Print out the results
+print(____)
 
-
-# Print out the result
-print(l, char_5, char_3_last)
 
 ```
 
 *** =solution
 ```{python}
-# Assign "sonder" to the object s
-s = "sonder"
+# Import re
+import re
 
-# Find the length of s: l
-l = len(s)
+# Assign the sequence to the object seq
+seq = "ATGCTTCGGCAAGACTCAAAAAATA"
 
-# Find the 5th character of s: char_5
-char_5 = s[4]
-
-# Find the 3rd-last character of s: char_3_last
-char_3_last = s[-3]
+# Search for AGA: results
+results = re.match("AGA", seq)
 
 # Print out the result
-print(l, char_5, char_3_last)
+print(results)
 
 ```
 
@@ -84,45 +77,58 @@ success_msg("Great work!")
 ```
 
 --- type:NormalExercise lang:python xp:50 skills:1 key:514818b19a
-## Slice Strings
+## Searching for a period
 
-A particular long word on "The Dictionary of Obscure Sorrows" is Ruckkehrunruhe, which refers to "the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness." Say you want to slice this word at every occurence of the character "r", and turn it to ["uckkeh", "un", "uhe"]. Use `split` to accompanish that.
+Now you want to know if the opening of "A Tale of Two Cities" has a complete sentence that ends with the letter "es" and then a period. Use `re.search()` and the regular expression of "es." to find out!
 
 *** =instructions
-- Use `split` to slice the word "Ruckkehrunruhe" at every occurence of "r." The syntax of the string object's built-in method `split` is `s.split(string)` where `s` is the string you want to split and `string` is the delimiter string.
+- Import the `re` package.
+- Use `re.search()` to check if there is "es." in the object `text`.
+- Print out the `results`.
+- Click `Submit Answer` to print out the original `text` to see for yourself if there's any period.  
 
 *** =hint
-- You should call `s.split("r")` to create `lst`.
+- The command to import package `x` is `import x`.
+- The regular expression for period is `\.`.
+- You don't need to change the code we provided for the first `print` statement.
+- You don't need to change the code for the second `print` statement.
 
 *** =pre_exercise_code
 ```{python}
-
+text = "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity..."
 
 ```
 
 *** =sample_code
 ```{python}
-# Assign Ruckkehrunruhe to the object s
-s = "Ruckkehrunruhe"
-
-# Slice the word at every occurence of r: lst
+# Import re
 
 
-# Print out the resulting list
-print(lst)
+# Search for the regular expression of es. in text: results
+
+
+# Print out the results
+print()
+
+# Print out the original text
+print(text)
 
 ```
 
 *** =solution
 ```{python}
-# Assign Ruckkehrunruhe to the object s
-s = "Ruckkehrunruhe"
+# Import re
+import re
 
-# Slice the word at every occurence of r: lst
-lst = s.split("r")
+# Search for the regular expression of es. in text: results
+re.search("es/.", text)
 
-# Print out the resulting list
-print(lst)
+# Print out the results
+print(results)
+
+# Print out the original text
+print(text)S
+
 ```
 
 *** =sct
@@ -490,16 +496,22 @@ test_mc(4, [msg1, msg2, msg3, msg4])
 ```
 
 
---- type:NormalExercise lang:python xp:100 skills:1 key:763f40b9a3
-## Strip Away a New Line
+--- type:VideoExercise lang:python xp:50 skills:2 key:40f8c6581f
+## Replace and Strip
+- replace: str.replace(old_string, new_strin, count)
+- strip: str.strip(string)
 
-We have a damaged digital file of "The Tale of Two Cities," where the opening is mixed with "0"s at the beginning and end. Try to get rid of these "0"s using `strip`. Remember the basic syntax of "0" is `str.strip(string)`
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:e115d724c0
+## Replace Part of a String with Another String
+
+Charles Dickens's novel "The Tale of the Two Cities" famously begins with the line:"It was the best of times; it was the worst of times; it was the age of wisdom; it was the age of foolishness; it was the epoch of belief; it was the epoch of incredulity." Now, try to use `replace` to change "was" in this sentence to "is." Remember that the syntax of `replace` is `str.replace(old_string,new_string)`.
 
 *** =instructions
-- Use `strip` to delete `0` from `text`.
+- Use `replace` to change "was" to "is" in the string `text`.
 
 *** =hint
-- Use `strip` on `text` to generate a new text.
+- Use the method `replace` on `text` and take the old string and the new string as arguments.
 
 *** =pre_exercise_code
 ```{python}
@@ -509,9 +521,9 @@ We have a damaged digital file of "The Tale of Two Cities," where the opening is
 *** =sample_code
 ```{python}
 # Assign the opening of "The Tale of Two Cities" to the object text
-text = "00000It was the best of times; it was the worst of times; it was the age of wisdom; it was the age of foolishness; it was the epoch of b0elief; it was the epoch of incredulity.0000"
+text = "It was the best of times; it was the worst of times; it was the age of wisdom; it was the age of foolishness; it was the epoch of belief; it was the epoch of incredulity."
 
-# Strip the 0s away from the text: new_text
+# Replace every occurence of "was" with "is": new_text
 
 
 # Print out the resulting string
@@ -522,14 +534,13 @@ print(new_text)
 *** =solution
 ```{python}
 # Assign the opening of "The Tale of Two Cities" to the object text
-text = "00000It was the best of times; it was the worst of times; it was the age of wisdom; it was the age of foolishness; it was the epoch of b0elief; it was the epoch of incredulity.0000"
+text = "It was the best of times; it was the worst of times; it was the age of wisdom; it was the age of foolishness; it was the epoch of belief; it was the epoch of incredulity."
 
-# Strip the 0s away from the text: new_text
-new_text = text.strip("0")
+# Replace every occurence of "was" with "is": new_text
+new_text = text.replace("was","is")
 
 # Print out the resulting string
 print(new_text)
-
 
 ```
 
@@ -540,5 +551,7 @@ print(new_text)
 
 success_msg("Great work!")
 ```
+
+
 
 *The description of the part about format is a bit too vague. Can't figure out exactly what I'm supposed to teach the student because there's a lot you can do with `format()`*
