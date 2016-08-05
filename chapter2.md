@@ -393,55 +393,39 @@ print(results)
 success_msg("Great work!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1 key:6569731b94
-## Strip Away a New Line
+--- type:MultipleChoiceExercise lang:python xp:100 skills:1 key:3e74f114a8
+## What does this mean?
 
-We have a damaged digital file of "The Tale of Two Cities," where the opening is mixed with "0"s at the beginning and end. Try to get rid of these "0"s using `strip`. Remember the basic syntax of "0" is `str.strip(string)`
+Find a string that will match with the following regular expression when using `re.search()`.
+`"[cd]|\\ab"
 
 *** =instructions
-- Use `strip` to delete `0` from `text`.
+- a
+- b
+- \a
+- \ab
+
 
 *** =hint
-- Use `strip` on `text` to generate a new text.
+- Recall what `\s`, and `+` mean.
 
 *** =pre_exercise_code
 ```{python}
 
 ```
 
-*** =sample_code
-```{python}
-# Assign the opening of "The Tale of Two Cities" to the object text
-text = "00000It was the best of times; it was the worst of times; it was the age of wisdom; it was the age of foolishness; it was the epoch of b0elief; it was the epoch of incredulity.0000"
-
-# Strip the 0s away from the text: new_text
-
-
-# Print out the resulting string
-print(new_text)
-
-```
-
-*** =solution
-```{python}
-# Assign the opening of "The Tale of Two Cities" to the object text
-text = "00000It was the best of times; it was the worst of times; it was the age of wisdom; it was the age of foolishness; it was the epoch of b0elief; it was the epoch of incredulity.0000"
-
-# Strip the 0s away from the text: new_text
-new_text = text.strip("0")
-
-# Print out the resulting string
-print(new_text)
-
-
-```
-
 *** =sct
 ```{python}
-# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+msg1 = """Remember`\\` signifies a `\` in the string."""
+
+msg2 = """Remember`\\` signifies a `\` in the string."""
+
+msg3 = """The string has to containt either pattern in its complete form"""
+
+msg4 = """Exactly!"""
 
 
-success_msg("Great work!")
+test_mc(4, [msg1, msg2, msg3, msg4])
 ```
 --- type:MultipleChoiceExercise lang:python xp:100 skills:1 key:16955fff5b
 ## Strip and Replace
