@@ -738,7 +738,7 @@ print(results)
 
 success_msg("Great work!")
 ```
---- type:MultipleChoiceExercise lang:python xp:100 skills:1 key:3e74f114a8
+--- type:MultipleChoiceExercise lang:python xp:100 skills:1 key:bab651380d
 ## All together now!
 
 Now it's time to put all the patterns we learned together! See if you can understand which text the following regular expression will match with:
