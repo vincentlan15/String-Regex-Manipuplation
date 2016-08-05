@@ -61,7 +61,7 @@ import re
 seq = "ATGCTTCGGCAAGACTCAAAAAATA"
 
 # Search for AGA: results
-results = re.match("AGA", seq)
+results = re.search("AGA", seq)
 
 # Print out the result
 print(results)
@@ -127,7 +127,7 @@ re.search("es/.", text)
 print(results)
 
 # Print out the original text
-print(text)S
+print(text)
 
 ```
 
