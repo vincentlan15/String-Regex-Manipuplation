@@ -500,7 +500,7 @@ print(results1,results2)
 success_msg("Great work!")
 ```
 
---- type:NormalExercise lang:python xp:100 skills:1 key:536588d87c
+--- type:NormalExercise lang:python xp:100 skills:1 key:5723a6e978
 ## Find repeated sequence
 
 What if you are not only looking for repeated letters, but repeated sequence? For instance instead of looking for C, CC, CCC... you want to look for CG, CGCG, CGCGCG... You can group several letters together in `()`, and then search them as a unit. When you use `*` or `+`, Python searches for repetitions of the whole unit. Now, use this method to search for repetitions of `AT` using both `+` and `*`.   
