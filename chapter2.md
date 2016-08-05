@@ -343,44 +343,45 @@ success_msg("Great work!")
 
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:c91a8bede7
-## Replace String with a Count
+## Search for a Group of Characters
 
-Say you think that the line "It was the best of times; it was the worst of times" doesn't represent how you feel: We have already been through the worst of times, and now it's just the best of times. Thus, you want to change the first "was" to "is" but keep the second one. You can do that by adding a count as an argument after the old and new string.
+You love every letter in the alphabet table from "t" to "x". You want to know if your favorite passage, the opening of "A Tale of Two Cities," has any of these letters using `[]`. One way to do it is search for `[tuvwx]`. Another is to search `[t-x]`, which will tell Python to search for any letter from "t" to "x" (You can similary use `[0-9]` to see if there's any number in a string). Use either of these methods to look for your favorite letters in `text`.
 
 *** =instructions
-- Use `replace` to change "was" to "is" with a count of 1.
+- Search for the letters from "t" to "x".
 
 *** =hint
-- The syntax for `replace` is `str.replace(old_string, new_string, count)`.
+- Use `re.search` and put `|` in the argument.
 
 *** =pre_exercise_code
 ```{python}
+text = "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity..."
 
 ```
 
 *** =sample_code
 ```{python}
-# Assign the first line of "The Tale of Two Cities" to the object text
-text = "It was the best of times; it was the worst of times."
+# Import re
+import re
 
-# Replace only the first occurence of "was" with "is": new_text
+# Search for letters from t to x: results
 
 
-# Print out the resulting string
-print(new_text)
+# Print out the results
+print(____)
 
 ```
 
 *** =solution
 ```{python}
-# Assign the first line of "The Tale of Two Cities" to the object text
-text = "It was the best of times; it was the worst of times."
+# Import re
+import re
 
-# Replace only the first occurence of "was" with "is": new_text
-new_text = text.replace("was","is",1)
+# Search for letters from t to x: results
+re.search([t-x], text)
 
-# Print out the resulting string
-print(new_text)
+# Print out the results
+print(results)
 
 ```
 
