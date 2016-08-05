@@ -77,25 +77,25 @@ success_msg("Great work!")
 ```
 
 --- type:NormalExercise lang:python xp:50 skills:1 key:514818b19a
-## Searching for a sentence ending
+## Searching for any character
 
-Now you want to know if the opening of "A Tale of Two Cities" has a complete sentence that ends with the letter "es" and then a period. Use `re.search()` and the regular expression of "es." to find out!
+Suppose you want to know if a string has any character at all, as opposed to an empty string or a string with only line break characters. What you need is to saerch with a ".". In regular expressions, "." belongs to the so-called "metacharacters" that signify certain structures in the pattern. Now, use it as the search pattern to find if there's any character in the string you are assigned, named `text`.
 
 *** =instructions
 - Import the `re` package.
-- Use `re.search()` to check if there is "es." in the object `text`.
+- Use `re.search()` to check if there is any character in the object `text`.
 - Print out the `results`.
-- Click `Submit Answer` to print out the original `text` to see for yourself if there's any period.  
+- Click `Submit Answer` to print out the original `text` to see for yourself if there's any content in it.  
 
 *** =hint
 - The command to import package `x` is `import x`.
-- The regular expression for period is `\.`.
+- Simply use "." as the search pattern.
 - You don't need to change the code we provided for the first `print` statement.
 - You don't need to change the code for the second `print` statement.
 
 *** =pre_exercise_code
 ```{python}
-text = "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity..."
+text = "Keep up the good work!"
 
 ```
 
@@ -609,6 +609,64 @@ seq = "ATGCTTCGGCAAGACTCAAAAAATA"
 
 # Search for ALL OCCURENCES of the pattern using ?: results
 results = re.findall("TG?C",seq)
+
+# Print out the results
+print(results)
+
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
+
+success_msg("Great work!")
+```
+
+--- type:NormalExercise lang:python xp:100 skills:1 key:dd4e809615
+## Using "." and "*" together
+
+We learned earlier that "." can be used to match any character. Now that we have learned "*", we can use the two together to create powerful search patterns. A pattern such as "A.*G", for instance, means "an A followed by anything, and then G." Now use this technique to find *all occurences* of a C appearing before a G in the gene sequence we've been working on.   
+
+*** =instructions
+- Search in `seq` for *all* occurences of a "C" appearing before a "G".
+- Print out the results
+
+*** =hint
+- The search pattern should be `C.+G`.
+- You don't need to change the code for the print statement that we provided.
+
+*** =pre_exercise_code
+```{python}
+
+```
+
+*** =sample_code
+```{python}
+# Import re
+import re
+
+# Assign the gene sequence to seq
+seq = "ATGCTTCGGCAAGACTCAAAAAATA"
+
+# Search for ALL OCCURENCES of the pattern: results
+
+
+# Print out the results
+print(____)
+
+```
+
+*** =solution
+```{python}
+# Import re
+import re
+
+# Assign the gene sequence to seq
+seq = "ATGCTTCGGCAAGACTCAAAAAATA"
+
+# Search for ALL OCCURENCES of the pattern: results
+results = re.findall("C.+G",seq)
 
 # Print out the results
 print(results)
