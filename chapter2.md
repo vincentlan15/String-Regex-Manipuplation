@@ -378,7 +378,7 @@ print(____)
 import re
 
 # Search for letters from t to x: results
-re.search([t-x], text)
+re.search("[t-x]", text)
 
 # Print out the results
 print(results)
