@@ -571,7 +571,7 @@ success_msg("Great work!")
 Now it gets a bit more tricky: you are looking for two "A"s that are either consecutive or separated by a "G". How can you do that? A method we learned before, of course, is "AA|AGA", but now with the new `?` operator, we have a simpler way to express "the 'G' between the two 'A's is optional." How exactly should the expression be? We leave the challenge to you.   
 
 *** =instructions
-- Search in `seq` for two "A"s that are either consecutive or sepearted by a "G".
+- Search in `seq` for *all* occurences of two "A"s either consecutive or sepearted by a "G".
 - Print out the results
 
 *** =hint
@@ -591,7 +591,7 @@ import re
 # Assign the gene sequence to seq
 seq = "ATGCTTCGGCAAGACTCAAAAAATA"
 
-# Search for the pattern using ?: results
+# Search for ALL OCCURENCES of the pattern using ?: results
 
 
 # Print out the results
@@ -607,8 +607,8 @@ import re
 # Assign the gene sequence to seq
 seq = "ATGCTTCGGCAAGACTCAAAAAATA"
 
-# Search for the pattern using ?: results
-results = re.search("AG?A",seq)
+# Search for ALL OCCURENCES the pattern using ?: results
+results = re.findall("AG?A",seq)
 
 # Print out the results
 print(results)
