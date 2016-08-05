@@ -121,7 +121,7 @@ print(text)
 import re
 
 # Search for the regular expression of es. in text: results
-re.search("es/.", text)
+results = re.search("es/.", text)
 
 # Print out the results
 print(results)
