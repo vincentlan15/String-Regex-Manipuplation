@@ -77,7 +77,7 @@ success_msg("Great work!")
 ```
 
 --- type:NormalExercise lang:python xp:50 skills:1 key:514818b19a
-## Searching for a period
+## Searching for a sentence ending
 
 Now you want to know if the opening of "A Tale of Two Cities" has a complete sentence that ends with the letter "es" and then a period. Use `re.search()` and the regular expression of "es." to find out!
 
@@ -140,15 +140,15 @@ success_msg("Great work!")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:3319f86744
-## Join Strings
+## Find all
 
-Another method we often use on strings is `join` which, as the name suggests, is the opposite of `split`. `s.join(lst)` adds the string `s` after each string in the list `lst`. For instance, in the previous example, after slicing the "Ruckkehrunruhe" with "r", we got three fragments of the word. We can use `join` to add "h" to the end of each fragment and create a new word.  
+Now you are simply interested in finding "es", no matter if they are followed by a period or not. You know they have to be in the `text`, because "times" already have "es." However, you want to know if there are more occurences of this pattern, so you want to use `re.findall()` to saarch for all `es` in the `text`.    
 
 *** =instructions
-- Use `join` to add "h" to the end of each fragment in the list `lst`.
+- Use `re.findall()` to find all `es` in the `text`.
 
 *** =hint
-- Use `join` on "." and take `lst` as the argument.
+- The syntax for `re.findall()` is `re.findall(pattern, string)`.
 
 *** =pre_exercise_code
 ```{python}
@@ -157,27 +157,27 @@ Another method we often use on strings is `join` which, as the name suggests, is
 
 *** =sample_code
 ```{python}
-# Assign the fragements of "Ruckkehrunruhe" to the object lst
-lst = ["uckkeh","un","uhe"]
+# Import re
+import re
 
-# Join the "h" at the end of each word in lst: s2
+# Find all `es` in `text`: results
 
 
-# Print out each sentence ending with \n
-
+# Print the results
+print(____)
 
 ```
 
 *** =solution
 ```{python}
-# Assign the fragements of "Ruckkehrunruhe" to the object lst
-lst = ["uckkeh","un","uhe"]
+# Import re
+import re
 
-# Join the "h" at the end of each word in lst: s2
+# Find all `es` in `text`: results
+results = re.findall("es", text)
 
-
-# Print out each sentence ending with \n
-
+# Print the results
+print(results)
 
 ```
 
@@ -190,71 +190,46 @@ success_msg("Great work!")
 ```
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:1723f19db3
-## Capitalize First Letters
+## Match characters at beginning and end
 
-Sometimes you get a paragraph of text where the first letter of each sentence is not capitalized. The method `capitalize()` can Capitalize the first letter of the whole string, but there are multiple sentences in a string, it only takes care of the first sentence. What can we do? Yes, you guessed it. We can use `split` to divide the paragraph into its sentences, use `capitalize()` to capitalize the first letter in each sentence, and then join all the individual sentences together!
-
-Note that `join()` and `capitalize()` create a new string without changing the original ones. So you will have to explicitly assign the old string or list of strings to new ones.
+What if you want to search for characters only at the beginning or ending of a text? The go-to tool of such tasks is `re.match()`. which by default searches for a pattern only at the beginning of a string. Now, find out if the DNA sequence you worked with earlier starts with "ATG."
 
 *** =instructions
-- Use `split` to slice the definition of the word "Ruckkehrunruhe" (edited for training purpose) at every occurence of ". ". Remember you want to include the space after each period in the delimiter!
-- Iterate over all the sentences and change them to new strings created by `capitalize()`.
-- Join all the sentences back together with ". ".
+- Use `match` to find out if the DNA sequence `seq` start with "ATG".
+- Print out the results.
 
 *** =hint
-- The syntax for `split` is `s.split(string)`, where `s` is the string you want to split and `string` is the delimiter string.
-- Use its index to iterate over each element in `lst`, and assign the capitalized string to the element.
-- The syntax for `join` is `s.join(lst)`, where `s` is the string to put at the end of each string in `lst`.
+- The syntax for `match` is `re.match(pattern, string)`.
+- You don't need to change the code for the print statement that we have provided.
 
 *** =pre_exercise_code
 ```{python}
-
+seq = "ATGCTTCGGCAAGACTCAAAAAATA"
 ```
 
 *** =sample_code
 ```{python}
-# Assign the definition of "Ruckkehrunruhe" to the object par
-par = "ruckkehrunruhe is the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness. you have to keep reminding yourself that it happened at all. however it felt so vivid just days ago."
+# Import re
+import re
 
-# Slice the word at every occurence of ". ": lst
-
-
-# Create an empty list to store the sentences with capitalized first letter: lst_cap
-lst_cap = []
-
-# Capitalize the first letter of each sentence and append it to lst_cap
+# Match ATG at the beginning of seq: results
 
 
-
-
-# Joining all the sentences back together: par_cap
-
-
-# Print the result
-print(par_cap)
+# Print out the results
+print(____)
 
 ```
 
 *** =solution
 ```{python}
-# Assign the definition of "Ruckkehrunruhe" to the object par
-par = "ruckkehrunruhe is the feeling of returning home after an immersive trip only to find it fading rapidly from your awareness. you have to keep reminding yourself that it happened at all. however it felt so vivid just days ago."
+# Import re
+import re
 
-# Slice the word at every occurence of ". ": lst
-lst = par.split(". ")
+# Match ATG at the beginning of seq: results
+results = re.match("ATG",seq)
 
-# Create an empty list to store the sentences with capitalized first letter: lst_cap
-lst_cap = []
-
-# Capitalize the first letter of each sentence and append it to lst_cap
-for i in range(len(lst)):
-    lst_cap.append(lst[i].capitalize())
-
-# Joining all the sentences back together: par_cap
-par_cap = ". ".join(lst_cap)
-
-# Print the result
-print(par_cap)
+# Print out the results
+print(____)
 
 ```
 
