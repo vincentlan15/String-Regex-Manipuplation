@@ -108,10 +108,10 @@ text = "It was the best of times, it was the worst of times, it was the age of w
 
 
 # Print out the results
-print()
+print(____)
 
 # Print out the original text
-print(text)
+print(____)
 
 ```
 
@@ -243,19 +243,19 @@ success_msg("Great work!")
 
 
 --- type:MultipleChoiceExercise lang:python xp:100 skills:1 key:3e74f114a8
-## Displaying Text after Tagline
+## From Regular Expression to String
 
-You received a string that contains a text message you want to collect, but it also contains information about the text, separated from the actual content with ">>>START_HERE<<<". Enter "text" in the IPython Shell to see the full string. Which of the following codes can help you create an object `text_clean` that has only the text message?
-
+What string does the following regular expression correspond to?
+`"Let's\s+dance\."\s+he\s+said\s+\(looking\s+me\s+in\s+the\s+eye\)\.`
 
 *** =instructions
-- `text_clean = text.split(">>>START_HERE<<<")`
-- `lst = text.split(">>>START_HERE<<<")``
-  `text_clean = lst[1]`
-- `text_clean = text.split(">>>START_HERE<<<")[2]`
+- Let's\s dance. s\hes saids lookings mes ins thes eye. 
+- Let's dance. he said looking me in the eye.
+- "Let's dance."he said(looking me in the eye).
+- "Let's dance." he said (looking me in the eye).
 
 *** =hint
-- Recall what kind of object `split` outputs.
+- Recall what `\s`, and `+` mean.
 
 *** =pre_exercise_code
 ```{python}
@@ -265,60 +265,70 @@ text="Time:17:06Jul07 Location:Cambridge,MA >>START_HERE<< Do you want to grab d
 
 *** =sct
 ```{python}
-msg1 = """`split` generates a list of strings, not just a single string."""
+msg1 = """`\s+` means space. It is not related to the letter `s`."""
 
-msg2 = """Yes!"""
+msg2 = """Pay attention to `\"`, `\(` and other expressions for punctuations."""
 
-msg3 = """This code is correct except that the index in a list starts with 0."""
+msg3 = """Pay attention to all the `\s+` that signifies a space."""
 
-test_mc(2, [msg1, msg2, msg3])
+msg4 = """Exactly!"""
+
+
+test_mc(4, [msg1, msg2, msg3, msg4])
 ```
 
 --- type:VideoExercise lang:python xp:50 skills:2 key:40f8c6581f
-## Replace and Strip
-- replace: str.replace(old_string, new_strin, count)
-- strip: str.strip(string)
-
+## Search with Pattern(??)
+- |: search for either 
+- []: any of the characters
+- \\: this is not re!
 
 --- type:NormalExercise lang:python xp:100 skills:1 key:e115d724c0
-## Replace Part of a String with Another String
+## Search for either words
 
-Charles Dickens's novel "The Tale of the Two Cities" famously begins with the line:"It was the best of times; it was the worst of times; it was the age of wisdom; it was the age of foolishness; it was the epoch of belief; it was the epoch of incredulity." Now, try to use `replace` to change "was" in this sentence to "is." Remember that the syntax of `replace` is `str.replace(old_string,new_string)`.
+The opening of "A Tale of Two Cities," which you are very familiar by now, has many pairs of antonyms. You want to know if Dickens used "wisdom" and "stupidity" as one of these pairs, but you are cautious that he might have used another antonym of "wisdom" or of "stupidity." Thus, you determine to check if either of them appears in the text. Use `|` to do that.
 
 *** =instructions
-- Use `replace` to change "was" to "is" in the string `text`.
+- Use `|` to find if either "wisdom" or "stupidity" is in the string `text`.
 
 *** =hint
-- Use the method `replace` on `text` and take the old string and the new string as arguments.
+- Use `re.search` and put `|` in the argument.
 
 *** =pre_exercise_code
 ```{python}
+text = "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity..."
 
 ```
 
 *** =sample_code
 ```{python}
-# Assign the opening of "The Tale of Two Cities" to the object text
-text = "It was the best of times; it was the worst of times; it was the age of wisdom; it was the age of foolishness; it was the epoch of belief; it was the epoch of incredulity."
+# Import re
+import re
 
-# Replace every occurence of "was" with "is": new_text
+# Search for wisdom and stupidity in text: results
 
 
-# Print out the resulting string
-print(new_text)
+# Print the results
+print(____)
+
+# Print the text to check if the results are correct
+print(____)
 
 ```
 
 *** =solution
 ```{python}
-# Assign the opening of "The Tale of Two Cities" to the object text
-text = "It was the best of times; it was the worst of times; it was the age of wisdom; it was the age of foolishness; it was the epoch of belief; it was the epoch of incredulity."
+# Import re
+import re
 
-# Replace every occurence of "was" with "is": new_text
-new_text = text.replace("was","is")
+# Search for wisdom and stupidity in text: results
+results = re.search("wisdom|stupidity")
 
-# Print out the resulting string
-print(new_text)
+# Print the results
+print(results)
+
+# Print the text to check if the results are correct
+print(text)
 
 ```
 
