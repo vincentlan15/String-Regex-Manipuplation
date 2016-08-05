@@ -500,6 +500,67 @@ print(results1,results2)
 success_msg("Great work!")
 ```
 
+--- type:NormalExercise lang:python xp:100 skills:1 key:536588d87c
+## Find repeated sequence
+
+What if you are not only looking for repeated letters, but repeated sequence? For instance instead of looking for C, CC, CCC... you want to look for CG, CGCG, CGCGCG... You can group several letters together in `()`, and then search them as a unit. When you use `*` or `+`, Python searches for repetitions of the whole unit. Now, use this method to search for repetitions of `AT` using both `+` and `*`.   
+
+*** =instructions
+- Search for "AT" in `seq` using `+`.
+- Search for "AT" in `seq` using `*`.
+- Print out both results
+
+*** =hint
+- Use `re.search()` to search for "(AT)+" as the pattern.
+- Use `re.search()` to search for "(AT)*" as the pattern.
+- You don't need to change the code for the print statement that we provided.
+
+*** =pre_exercise_code
+```{python}
+
+```
+
+*** =sample_code
+```{python}
+# Import re
+import re
+
+# Assign the gene sequence to seq
+seq = "ATGCTTCGGCAAGACTCAAAAAATAT"
+
+# Search for AT using +: results1
 
 
-*The description of the part about format is a bit too vague. Can't figure out exactly what I'm supposed to teach the student because there's a lot you can do with `format()`*
+# Search for AT using *: results2
+
+
+# Print out both results
+print(____,____)
+
+```
+
+*** =solution
+```{python}
+# Import re
+import re
+
+# Assign the gene sequence to seq
+seq = "ATGCTTCGGCAAGACTCAAAAAATAT"
+
+# Search for AT using +: results1
+results1 = re.search("(AT)+",seq)
+
+# Search for AT using *: results2
+results2 = re.search("(AT)*",seq)
+
+# Print out both results
+print(results1,results2)
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
+
+success_msg("Great work!")
+```
