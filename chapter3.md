@@ -1,4 +1,6 @@
-title : Text Mining description : Now we've come to the fun part. With the techniques we've learned, we will create and use a text mining system which tries to predict the follow up word for a word. We will do this by analysing text. and building a data structure to hold the counts of follow up words. Let's get started!
+---
+title       : Text Mining
+description : Now we've come to the fun part. With the techniques we've learned, we will create and use a text mining system which tries to predict the follow up word for a word. We will do this by analysing text. and building a data structure to hold the counts of follow up words. Let's get started!
 
 
 attachments : slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
@@ -11,17 +13,15 @@ Explain the concept of this chapter. Tell them what we are going to do. We belie
 
 Split up the words
 
-Let's try extracting individual words with `split()`. If you use the function without any argument, it automatically splits words separated by a space, which is what we need. Now use `split` to 
+Let's try extracting individual words with `split()`. If you use the function without any argument, it automatically splits words separated by a space, which is what we need. Now use `split` to extract the words from our familiar opening of "A Tale of Two Cities."
 
 *** =instructions
-•Import the regular expression package  re .
-•Use  re.search()  to find "AGA" in the sequence  seq .
-•Print out the  results .
+- Use `split()` to extract individual words from `text` and save them to a list named `words`.
+- Print out `words` to see the results.
 
 *** =hint
-•The command to import package x is  import x .
-•The basic syntax of  re.search  is  re.search(pattern, string) .
-•You don't need to change the code for the  print  statement that we provided.
+- The basic syntax of `split` is `str.split()`.
+- You don't need to change the code for the  print  statement that we provided.
 
 *** =pre_exercise_code
 
@@ -29,13 +29,10 @@ Let's try extracting individual words with `split()`. If you use the function wi
 
 *** =sample_code
 
-# Import re
+# assign the opening to the object text
+text = "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity..."
 
-
-# Assign the sequence to the object seq
-seq = "ATGCTTCGGCAAGACTCAAAAAATA"
-
-# Search for AGA: results
+# Aplit the words: words
 
 
 # Print out the results
@@ -44,18 +41,14 @@ print(____)
 
 
 *** =solution
+# assign the opening to the object text
+text = "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity..."
 
-# Import re
-import re
+# Aplit the words: words
+words = text.split()
 
-# Assign the sequence to the object seq
-seq = "ATGCTTCGGCAAGACTCAAAAAATA"
-
-# Search for AGA: results
-results = re.search("AGA", seq)
-
-# Print out the result
-print(results)
+# Print out the results
+print(words)
 
 
 *** =sct
@@ -130,7 +123,7 @@ success_msg("Great work!")
 
 Find all
 
-Now you are simply interested in finding "es", no matter if they are followed by a period or not. You know they have to be in the  text , because "times" already have "es." However, you want to know if there are more occurences of this pattern, so you want to use  re.findall()  to saarch for all  es  in the  text . 
+Now you are simply interested in finding "es", no matter if they are followed by a period or not. You know they have to be in the  text , because "times" already have "es." However, you want to know if there are more occurences of this pattern, so you want to use  re.findall()  to saarch for all  es  in the  text .
 
 *** =instructions
 •Use  re.findall()  to find all  es  in the  text .
@@ -226,10 +219,10 @@ success_msg("Great work!")
 
 From Regular Expression to String
 
-What string does the following regular expression correspond to?  "Let's\s+dance\."\s+he\s+said\s+\(looking\s+me\s+in\s+the\s+eye\)\. 
+What string does the following regular expression correspond to?  "Let's\s+dance\."\s+he\s+said\s+\(looking\s+me\s+in\s+the\s+eye\)\.
 
 *** =instructions
-•Let's\s dance. s\hes saids lookings mes ins thes eye. 
+•Let's\s dance. s\hes saids lookings mes ins thes eye.
 •Let's dance. he said looking me in the eye.
 •"Let's dance."he said(looking me in the eye).
 •"Let's dance." he said (looking me in the eye).
@@ -258,7 +251,7 @@ test_mc(4, [msg1, msg2, msg3, msg4])
 --- type:VideoExercise lang:python xp:50 skills:2 key:40f8c6581f
 
 Search with Pattern(??)
-•|: search for either 
+•|: search for either
 •[]: any of the characters
 •\: this is not re!
 
@@ -407,7 +400,7 @@ Pattern Repetition
 
 Find gene sequence pattern
 
-In the gene sequence we have worked with, search for "C+" and "C*". Think before you submit the answer which pattern(s) will match. 
+In the gene sequence we have worked with, search for "C+" and "C*". Think before you submit the answer which pattern(s) will match.
 
 *** =instructions
 •Search for "C+" in  seq .
@@ -469,7 +462,7 @@ success_msg("Great work!")
 
 Find repeated sequence
 
-What if you are not only looking for repeated letters, but repeated sequence? For instance instead of looking for "C", "CC", "CCC"... you want to look for "CG", "CGCG", "CGCGCG"... You can group several letters together in  () , and then search them as a unit. When you use  *  or  + , Python searches for repetitions of the whole unit. Now, use this method to search for repetitions of "AT" using both  +  and  * . 
+What if you are not only looking for repeated letters, but repeated sequence? For instance instead of looking for "C", "CC", "CCC"... you want to look for "CG", "CGCG", "CGCGCG"... You can group several letters together in  () , and then search them as a unit. When you use  *  or  + , Python searches for repetitions of the whole unit. Now, use this method to search for repetitions of "AT" using both  +  and  * .
 
 *** =instructions
 •Search for "AT" in  seq  using  + .
@@ -531,7 +524,7 @@ success_msg("Great work!")
 
 Matching an optional letter
 
-Now it gets a bit more tricky: you are looking for a "T" and a "C" that are either consecutive or separated by a "G". How can you do that? A method we learned before, of course, is "TC|TGC", but now with the new  ?  operator, we have a simpler way to express "the 'G' between the two other letters is optional." How exactly should the expression be? We leave the challenge to you. 
+Now it gets a bit more tricky: you are looking for a "T" and a "C" that are either consecutive or separated by a "G". How can you do that? A method we learned before, of course, is "TC|TGC", but now with the new  ?  operator, we have a simpler way to express "the 'G' between the two other letters is optional." How exactly should the expression be? We leave the challenge to you.
 
 *** =instructions
 •Search in  seq  for all occurences of "T" and "C" either consecutive or sepearted by a "G".
@@ -586,7 +579,7 @@ success_msg("Great work!")
 
 Using "." and "*" together
 
-We learned earlier that "." can be used to match any character. Now that we have learned "", we can use the two together to create powerful search patterns. A pattern such as "A.G", for instance, means "an A followed by anything, and then G." Now use this technique to serach for a G appearing before a C in the gene sequence we've been working on. 
+We learned earlier that "." can be used to match any character. Now that we have learned "", we can use the two together to create powerful search patterns. A pattern such as "A.G", for instance, means "an A followed by anything, and then G." Now use this technique to serach for a G appearing before a C in the gene sequence we've been working on.
 
 *** =instructions
 •Search in  seq  for the occurences of a "G" appearing before a "C".
@@ -641,7 +634,7 @@ success_msg("Great work!")
 
 Using "[ ]" and "*" together
 
-Another powerful combination is "[]" and "*". What will this match with? Yes, it will match with consucutive characters that are all in our set. Now, use this to search for the combination of "A" and "G" in our gene sequence. 
+Another powerful combination is "[]" and "*". What will this match with? Yes, it will match with consucutive characters that are all in our set. Now, use this to search for the combination of "A" and "G" in our gene sequence.
 
 *** =instructions
 •Search in  seq  for the occurences of a "A", "G" combination.
@@ -696,7 +689,7 @@ success_msg("Great work!")
 
 All together now!
 
-Now it's time to put all the patterns we learned together! See if you can understand which text the following regular expression will match with:  "(0.*)+9|7+[332]*" 
+Now it's time to put all the patterns we learned together! See if you can understand which text the following regular expression will match with:  "(0.*)+9|7+[332]*"
 
 *** =instructions
 •"7903322"
@@ -723,4 +716,3 @@ msg4 = """Exactly!"""
 
 
 test_mc(4, [msg1, msg2, msg3, msg4])
-
