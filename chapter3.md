@@ -3,7 +3,8 @@ title       : Text Mining
 description : Now we've come to the fun part. With the techniques we've learned, we will create and use a text mining system which tries to predict the follow up word for a word. We will do this by analysing text. and building a data structure to hold the counts of follow up words. Let's get started!
 
 
-attachments : slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
+attachments :
+  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
 --- type:VideoExercise lang:python xp:50 skills:2 key:ef6777fad5
 
