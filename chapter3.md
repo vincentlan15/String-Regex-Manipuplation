@@ -16,7 +16,6 @@ Explain the concept of this chapter. Tell them what we are going to do. We belie
 Let's try extracting individual words with `split()`. If you use the function without any argument, it automatically splits words separated by a space, which is what we need. Now use `split` to extract the words from our familiar opening of "A Tale of Two Cities."
 
 *** =instructions
-
 - Use `split()` to extract individual words from `text` and save them to a list named `words`.
 - Print out `words` to see the results.
 
