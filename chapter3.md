@@ -29,7 +29,7 @@ Let's try extracting individual words with `split()`. If you use the function wi
 ```
 
 *** =sample_code
-
+```{python}
 # assign the opening to the object text
 text = "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity..."
 
@@ -38,26 +38,28 @@ text = "It was the best of times, it was the worst of times, it was the age of w
 
 # Print out the results
 print(____)
-
+```
 
 
 *** =solution
+```{python}
 # assign the opening to the object text
 text = "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity..."
 
-# Aplit the words: words
+# Split the words: words
 words = text.split()
 
 # Print out the results
 print(words)
-
+```
 
 *** =sct
-
+```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
 
 success_msg("Great work!")
+```
 
 --- type:NormalExercise lang:python xp:50 skills:1 key:514818b19a
 ## Searching for any character
