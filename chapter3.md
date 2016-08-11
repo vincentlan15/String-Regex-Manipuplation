@@ -6,7 +6,7 @@ attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
 --- type:VideoExercise lang:python xp:50 skills:2 key:ef6777fad5
-## What are regular expressions?
+## What is text mining?
 Explain the concept of this chapter. Tell them what we are going to do. We believe that in order to make a system that can predict which word comes next, we can use existing english texts, analyse their structure and use it to make predictions. Begin by explaining how to extract all words from a text. Use the split() function is a possibility. This gives problems with punctuation. Other option: re.findall().
 
 
