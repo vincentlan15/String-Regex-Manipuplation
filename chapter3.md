@@ -11,8 +11,7 @@ attachments :
 Explain the concept of this chapter. Tell them what we are going to do. We believe that in order to make a system that can predict which word comes next, we can use existing english texts, analyse their structure and use it to make predictions. Begin by explaining how to extract all words from a text. Use the split() function is a possibility. This gives problems with punctuation. Other option: re.findall().
 
 --- type:NormalExercise lang:python xp:50 skills:1 key:8c8181cc6b
-
-Split up the words
+##Split up the words
 
 Let's try extracting individual words with `split()`. If you use the function without any argument, it automatically splits words separated by a space, which is what we need. Now use `split` to extract the words from our familiar opening of "A Tale of Two Cities."
 
@@ -63,8 +62,7 @@ success_msg("Great work!")
 ```
 
 --- type:NormalExercise lang:python xp:50 skills:1 key:514818b19a
-
-Spliting words with findall()
+##Spliting words with findall()
 
 As we noticed, `split()` doesn't work well with punctuations. Now we are going to use `re.findall()` to split words, which can ignore punctuations. Specifically, `\w+` matches any one or more characters, and finding all `\w+` effectively means finding all the words in a string. Now, use this technique to extract all the words in the text we worked with earlier.
 
