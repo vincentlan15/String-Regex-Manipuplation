@@ -115,7 +115,7 @@ print(results)
 success_msg("Great work!")
 ```
 
---- type:NormalExercise lang:python xp:50 skills:1 key:514818b19a
+--- type:NormalExercise lang:python xp:50 skills:1 key:37797e2e7b
 ##Spliting words with findall()
 
 As we noticed, `split()` doesn't work well with punctuations. Now we are going to use `re.findall()` to split words, which can ignore punctuations. Specifically, `\w+` matches any one or more characters, and finding all `\w+` effectively means finding all the words in a string. Now, use this technique to extract all the words in the text we worked with earlier.
@@ -196,11 +196,11 @@ msg4 = """Exactly!"""
 
 test_mc(4, [msg1, msg2, msg3, msg4])
 ```
---- type:VideoExercise lang:python xp:50 skills:2 key:ef6777fad5
+--- type:VideoExercise lang:python xp:50 skills:2 key:37e4e8e29d
 ## What data structure?
 Given a list of words, which is in the correct order, you want to decide for each word, by which word it is followed each time. A nice resulting data structure would be a dictionary, where the keys are each unique word and the values are lists of follow up words. An even better data structure would be the same kind of dictionary, but with dictionaries as values. These dictionaries contain the frequency of follow up words. In the exercises we will gradually work to creating this data structure.
 
---- type:NormalExercise lang:python xp:50 skills:1 key:514818b19a
+--- type:NormalExercise lang:python xp:50 skills:1 key:90c76c9afa
 ##Finding the next word
 
 Let's use a for loop to find the follow up word for every word in the opening of `A Tale of Two Cities`. The words from the text are already split out and put into a list of the correct order named `results`.
