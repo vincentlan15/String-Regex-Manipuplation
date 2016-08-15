@@ -241,7 +241,7 @@ for i in range(len(results)-1):
 success_msg("Great work!")
 ```
 
---- type:NormalExercise lang:python xp:50 skills:1 key:90c76c9afa
+--- type:NormalExercise lang:python xp:50 skills:1 key:435c74468f
 ##Creating a dictionary
 
 Now that we know how to find the following word of each word in the text, we are going to create a dictionary to store all the information, where each key is a word in the text, and its value is a list of its following words. Use the same for loop as you used last time, but now add the following words to the dictionary
