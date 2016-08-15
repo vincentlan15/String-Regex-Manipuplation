@@ -79,12 +79,12 @@ As we noticed, `split()` doesn't work well with punctuations. Now we are going t
 - You don't need to change the code we provided for the `print` statement.
 
 *** =pre_exercise_code
-
+```{python}
 text = "Keep up the good work!"
-
+```
 
 *** =sample_code
-
+```{python}
 # Import re
 
 # assign the opening to the object text
@@ -95,9 +95,9 @@ text = "It was the best of times, it was the worst of times, it was the age of w
 
 # Print out the results
 print(____)
-
+```
 *** =solution
-
+```{python}
 # Import re
 import re
 
@@ -109,14 +109,14 @@ results = re.findall("\w+", text)
 
 # Print out the results
 print(results)
-
+```
 *** =sct
-
+```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
 
 success_msg("Great work!")
-
+```
 --- type:NormalExercise lang:python xp:100 skills:1 key:3319f86744
 
 Find all
