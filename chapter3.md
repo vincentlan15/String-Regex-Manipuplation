@@ -7,7 +7,7 @@ attachments :
   slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
 
 --- type:VideoExercise lang:python xp:50 skills:2 key:ef6777fad5
-
+## What is text mining?
 Explain the concept of this chapter. Tell them what we are going to do. We believe that in order to make a system that can predict which word comes next, we can use existing english texts, analyse their structure and use it to make predictions. Begin by explaining how to extract all words from a text. Use the split() function is a possibility. This gives problems with punctuation. Other option: re.findall().
 
 --- type:NormalExercise lang:python xp:50 skills:1 key:8c8181cc6b
@@ -22,14 +22,15 @@ Let's try extracting individual words with `split()`. If you use the function wi
 
 *** =hint
 - The basic syntax of `split` is `str.split()`.
-- You don't need to change the code for the  print  statement that we provided.
+- You don't need to change the code for the  print statement that we provided.
 
 *** =pre_exercise_code
+```{python}
 
-
+```
 
 *** =sample_code
-
+```{python}
 # assign the opening to the object text
 text = "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity..."
 
@@ -38,45 +39,44 @@ text = "It was the best of times, it was the worst of times, it was the age of w
 
 # Print out the results
 print(____)
-
+```
 
 
 *** =solution
+```{python}
 # assign the opening to the object text
 text = "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity..."
 
-# Aplit the words: words
+# Split the words: words
 words = text.split()
 
 # Print out the results
 print(words)
-
+```
 
 *** =sct
-
+```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
 
 success_msg("Great work!")
+```
 
 --- type:NormalExercise lang:python xp:50 skills:1 key:514818b19a
 
-Searching for any character
+Spliting words with findall()
 
-Suppose you want to know if a string has any character at all, as opposed to an empty string or a string with only line break characters. What you need is to saerch with a ".". In regular expressions, "." belongs to the so-called "metacharacters" that signify certain structures in the pattern. Now, use it as the search pattern to find if there's any character in the string you are assigned, named  text .
+As we noticed, `split()` doesn't work well with punctuations. Now we are going to use `re.findall()` to split words, which can ignore punctuations. Specifically, `\w+` matches any one or more characters, and finding all `\w+` effectively means finding all the words in a string. Now, use this technique to extract all the words in the text we worked with earlier.
 
 *** =instructions
-•Import the  re  package.
-•Use  re.search()  to check if there is any character in the object  text .
-•Print out the  results .
-•Click  Submit Answer  to print out the original  text  to see for yourself if there's any content in it.
-
+- Import the `re` package.
+- Use `re.findall()` to find all the words in the object `text`.
+- Print out the resuulting list.
 
 *** =hint
-•The command to import package  x  is  import x .
-•Simply use "." as the search pattern.
-•You don't need to change the code we provided for the first  print  statement.
-•You don't need to change the code for the second  print  statement.
+- The command to import package `x` is `import x`.
+- Pass `\w+` as an argument to `re.findall()`.
+- You don't need to change the code we provided for the `print` statement.
 
 *** =pre_exercise_code
 
@@ -87,31 +87,28 @@ text = "Keep up the good work!"
 
 # Import re
 
+# assign the opening to the object text
+text = "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity..."
 
-# Search for the regular expression of es. in text: results
+# Find all the words in text: results
 
 
 # Print out the results
 print(____)
-
-# Print out the original text
-print(____)
-
 
 *** =solution
 
 # Import re
 import re
 
-# Search for the regular expression of es. in text: results
-results = re.search("es/.", text)
+# assign the opening to the object text
+text = "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity..."
+
+# Find all the words in text: results
+results = re.findall("\w+", text)
 
 # Print out the results
 print(results)
-
-# Print out the original text
-print(text)
-
 
 *** =sct
 
