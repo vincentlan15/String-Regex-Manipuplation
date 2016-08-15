@@ -80,7 +80,8 @@ As we noticed, `split()` doesn't work well with punctuations. Now we are going t
 
 *** =pre_exercise_code
 ```{python}
-text = "Keep up the good work!"
+
+
 ```
 
 *** =sample_code
@@ -113,7 +114,6 @@ print(results)
 *** =sct
 ```{python}
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
-
 
 success_msg("Great work!")
 ```
