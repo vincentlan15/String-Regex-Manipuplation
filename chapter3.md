@@ -206,11 +206,11 @@ Given a list of words, which is in the correct order, you want to decide for eac
 Let's use a for loop to find the follow up word for every word in the opening of `A Tale of Two Cities`. The words from the text are already split out and put into a list of the correct order named `results`.
 
 *** =instructions
-- Loop over all the index of the object `results`.
+- Loop over the index of the object `results` except the last one.
 - For every index, print out the word at the index and at the next index.
 
 *** =hint
-- Use a for loop over `range(len(results)`.
+- Use a for loop over `range(len(results)-1)`.
 - Use `test[i]` to find the word at the index `i`.
 
 *** =pre_exercise_code
@@ -229,7 +229,7 @@ for ____ in ____:
 *** =solution
 ```{python}
 # Loop over the results
-for i in range(len(results)):
+for i in range(len(results)-1):
     print("the word " + results[i] + " is followed by " + results[i+1])
 
 ```
