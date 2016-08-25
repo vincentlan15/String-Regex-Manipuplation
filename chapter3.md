@@ -298,6 +298,8 @@ for i in range(len(results)-1):
         # Initiate the list of following words:        
         dict[results[i]] = [results[i+1]]
 
+print(dict)
+
 ```
 
 *** =sct
@@ -305,4 +307,98 @@ for i in range(len(results)-1):
 # SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
 
 success_msg("Great work!")
+```
+
+--- type:NormalExercise lang:python xp:50 skills:1 key:435c74468f
+##List comprehension
+I actually don't know how to do listcomprehension.
+
+
+*** =instructions
+- Create an empty dictionary named `dict`.
+- Loop over the index of the object `results` except the last one.
+- For each word, check if it is already a key in the dictionary by `if... in dict.keys()`.
+- If not, create a list and put the following word into it. If so, append the following word to the list.
+
+*** =hint
+- Use `{}` to create an empty dictionary.
+- Use a for loop over `range(len(results)-1)`.
+- Check if `results[i]` is in `dict.keys()`.
+- Call `dict[results[i]]` to initiate and update the list of the following words for `results[i]`.
+
+*** =pre_exercise_code
+```{python}
+results =   ['It', 'was', 'the', 'best', 'of', 'times', 'it', 'was', 'the', 'worst', 'of', 'times', 'it', 'was', 'the', 'age', 'of', 'wisdom', 'it', 'was', 'the', 'age', 'of', 'foolishness', 'it', 'was', 'the', 'epoch', 'of', 'belief', 'it', 'was', 'the', 'epoch', 'of', 'incredulity']
+```
+
+*** =sample_code
+```{python}
+# Create an empty dictionary: dict
+
+
+# Loop over the results
+for ____ in ____:
+    # Check if the word exists in the dictionary:
+    if ____:
+        # Update the list of following words:
+        ____
+    else:
+        # Initiate the list of following words:        
+        ____
+
+print(dict)
+
+```
+
+*** =solution
+```{python}
+# Create an empty dictionary: dict
+dict = {}
+
+# Loop over the results
+for i in range(len(results)-1):
+    # Check if the word exists in the dictionary:
+    if results[i] in dict:
+        # Update the list of following words:
+        dict[results[i]].append(results[i+1])
+    else:
+        # Initiate the list of following words:        
+        dict[results[i]] = [results[i+1]]
+
+print(dict)
+
+```
+
+*** =sct
+```{python}
+# SCT written with pythonwhat: https://github.com/datacamp/pythonwhat/wiki
+
+success_msg("Great work!")
+```
+--- type:MultipleChoiceExercise lang:python xp:100 skills:1 key:3e74f114a8
+## How to lowercase
+
+Which list comprehension would you use to normalise all words to their lower case form?
+
+*** =instructions
+
+
+*** =hint
+
+*** =pre_exercise_code
+```{python}
+```
+
+*** =sct
+```{python}
+msg1 = """`\s+` means space. It is not related to the letter `s`."""
+
+msg2 = """Pay attention to `\"`, `\(` and other expressions for punctuations."""
+
+msg3 = """Pay attention to all the `\s+` that signifies a space."""
+
+msg4 = """Exactly!"""
+
+
+test_mc(4, [msg1, msg2, msg3, msg4])
 ```
