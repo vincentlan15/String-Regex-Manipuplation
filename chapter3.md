@@ -309,7 +309,7 @@ print(dict)
 success_msg("Great work!")
 ```
 
---- type:NormalExercise lang:python xp:50 skills:1 key:435c74468f
+--- type:NormalExercise lang:python xp:50 skills:1 key:bd9ea74cf7
 ##List comprehension
 I actually don't know how to do listcomprehension.
 
@@ -375,7 +375,7 @@ print(dict)
 
 success_msg("Great work!")
 ```
---- type:MultipleChoiceExercise lang:python xp:100 skills:1 key:3e74f114a8
+--- type:MultipleChoiceExercise lang:python xp:100 skills:1 key:752bde28c2
 ## How to lowercase
 
 Which list comprehension would you use to normalise all words to their lower case form?
